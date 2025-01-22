@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
     <div
-  class="relative  bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${backgroundImage})` , backgroundSize: ' auto 500px', backgroundPosition: 'top' // Image height is 300px, width adjusts automaticallyauto
+  class="relative  bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${backgroundImage})` , backgroundSize: ' auto 500px', backgroundPosition: 'top' 
  }}
 >
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20  text-center lg:pt-32">
