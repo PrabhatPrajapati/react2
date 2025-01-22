@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo.svg"
 
 function header() {
   return (
@@ -10,19 +11,19 @@ function header() {
               <div class="shrink-0">
                 <a href="#" title="" class="">
                   <img
-                    class="block w-auto h-8 dark:hidden"
-                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full.svg"
+                    class="block w-auto h-4 dark:hidden"
+                    src={logo}
                     alt=""
                   />
                   <img
-                    class="hidden w-auto h-8 dark:block"
-                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/logo-full-dark.svg"
+                    class="hidden w-auto h-4 dark:block"
+                    src={logo}
                     alt=""
                   />
                 </a>
               </div>
 
-              <ul class="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+              <ul class="hidden lg:flex items-center justify-center gap-6 md:gap-8 py-3 sm:justify-center">
                 <li>
                   <a
                     href="#"
