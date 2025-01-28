@@ -4,8 +4,8 @@ import logo from "../assets/logo.svg"
 function header() {
   return (
     <>
-      <nav class="bg-white dark:bg-gray-800 antialiased">
-        <div class="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
+      <nav class="bg-white  antialiased shadow-md ">
+        <div class="max-w-7xl px-4 mx-auto 2xl:px-0 py-2 ">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-8">
               <div class="shrink-0">
@@ -23,14 +23,18 @@ function header() {
                 </a>
               </div>
 
-              <ul class="hidden lg:flex items-center justify-center gap-6 md:gap-8 py-3 sm:justify-center">
+              
+            </div>
+
+            <div>
+            <ul class="hidden lg:flex items-center justify-center gap-6 md:gap-8 py-3 sm:justify-center">
                 <li>
                   <a
                     href="#"
                     title=""
                     class="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
                   >
-                    Home
+                    Start Here
                   </a>
                 </li>
                 <li class="shrink-0">
@@ -39,7 +43,7 @@ function header() {
                     title=""
                     class="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
                   >
-                    Best Sellers
+                    Solutions
                   </a>
                 </li>
                 <li class="shrink-0">
@@ -48,7 +52,7 @@ function header() {
                     title=""
                     class="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
                   >
-                    Gift Ideas
+                    Success Stories
                   </a>
                 </li>
                 <li class="shrink-0">
@@ -57,7 +61,7 @@ function header() {
                     title=""
                     class="text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
                   >
-                    Today's Deals
+                    Resources
                   </a>
                 </li>
                 <li class="shrink-0">
@@ -97,7 +101,7 @@ function header() {
                     d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
                   />
                 </svg>
-                <span class="hidden sm:flex">My Cart</span>
+              
                 <svg
                   class="hidden sm:flex w-4 h-4 text-gray-900 dark:text-white ms-1"
                   aria-hidden="true"
@@ -381,7 +385,7 @@ function header() {
                 id="userDropdownButton1"
                 data-dropdown-toggle="userDropdown1"
                 type="button"
-                class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white"
+                class="inline-flex items-center rounded-lg justify-center  hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white"
               >
                 <svg
                   class="w-5 h-5 me-1"
@@ -398,7 +402,7 @@ function header() {
                     d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                   />
                 </svg>
-                Account
+            
                 <svg
                   class="w-4 h-4 text-gray-900 dark:text-white ms-1"
                   aria-hidden="true"
@@ -429,8 +433,7 @@ function header() {
                       title=""
                       class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
-                      {" "}
-                      My Account{" "}
+                     
                     </a>
                   </li>
                   <li>
@@ -439,8 +442,7 @@ function header() {
                       title=""
                       class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
-                      {" "}
-                      My Orders{" "}
+                      
                     </a>
                   </li>
                   <li>
