@@ -27,12 +27,12 @@ function header() {
             </div>
 
             <div>
-            <ul class="hidden lg:flex items-center justify-center gap-6 md:gap-8 py-3 sm:justify-center">
+            <ul class="hidden lg:flex items-center justify-center gap-6 md:gap-8 py-3 sm:justify-center font-poppins">
                 <li>
                   <a
                     href="#"
                     title=""
-                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
+                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700  "
                   >
                     Start Here
                   </a>
@@ -41,7 +41,7 @@ function header() {
                   <a
                     href="#"
                     title=""
-                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
+                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700  "
                   >
                     Solutions
                   </a>
@@ -50,7 +50,7 @@ function header() {
                   <a
                     href="#"
                     title=""
-                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
+                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700 "
                   >
                     Success Stories
                   </a>
@@ -59,7 +59,7 @@ function header() {
                   <a
                     href="#"
                     title=""
-                    class="text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
+                    class="text-sm font-medium text-gray-900 hover:text-primary-700 "
                   >
                     Resources
                   </a>
@@ -68,7 +68,7 @@ function header() {
                   <a
                     href="#"
                     title=""
-                    class="text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
+                    class="text-sm font-medium text-gray-900 hover:text-primary-700 "
                   >
                     Sell
                   </a>
@@ -81,9 +81,9 @@ function header() {
                 id="myCartDropdownButton1"
                 data-dropdown-toggle="myCartDropdown1"
                 type="button"
-                class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white"
+                class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100  text-sm font-medium leading-none text-gray-900 "
               >
-                <span class="sr-only">Cart</span>
+                <span class="sr-only font-poppins">Cart</span>
                 <svg
                   class="w-5 h-5 lg:me-1"
                   aria-hidden="true"
@@ -123,30 +123,30 @@ function header() {
 
               <div
                 id="myCartDropdown1"
-                class="hidden z-10 mx-auto max-w-sm space-y-4 overflow-hidden rounded-lg bg-white p-4 antialiased shadow-lg dark:bg-gray-800"
+                class="hidden z-10 mx-auto max-w-sm space-y-4 overflow-hidden rounded-lg bg-white p-4 antialiased shadow-lg "
               >
                 <div class="grid grid-cols-2">
                   <div>
                     <a
                       href="#"
-                      class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline"
+                      class="truncate text-sm font-semibold leading-none text-gray-900  hover:underline"
                     >
                       Apple iPhone 15
                     </a>
-                    <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
+                    <p class="mt-0.5 truncate text-sm font-normal text-gray-500 ">
                       $599
                     </p>
                   </div>
 
                   <div class="flex items-center justify-end gap-6">
-                    <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">
+                    <p class="text-sm font-normal leading-none text-gray-500 ">
                       Qty: 1
                     </p>
 
                     <button
                       data-tooltip-target="tooltipRemoveItem1a"
                       type="button"
-                      class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600"
+                      class="text-red-600 hover:text-red-700 dark:text-red-500 "
                     >
                       <span class="sr-only"> Remove </span>
                       <svg
@@ -166,7 +166,7 @@ function header() {
                     <div
                       id="tooltipRemoveItem1a"
                       role="tooltip"
-                      class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
+                      class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 "
                     >
                       Remove item
                       <div class="tooltip-arrow" data-popper-arrow></div>
@@ -178,24 +178,24 @@ function header() {
                   <div>
                     <a
                       href="#"
-                      class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline"
+                      class="truncate text-sm font-semibold leading-none text-gray-900  hover:underline"
                     >
                       Apple iPad Air
                     </a>
-                    <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
+                    <p class="mt-0.5 truncate text-sm font-normal text-gray-500 ">
                       $499
                     </p>
                   </div>
 
                   <div class="flex items-center justify-end gap-6">
-                    <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">
+                    <p class="text-sm font-normal leading-none text-gray-500 ">
                       Qty: 1
                     </p>
 
                     <button
                       data-tooltip-target="tooltipRemoveItem2a"
                       type="button"
-                      class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600"
+                      class="text-red-600 hover:text-red-700 dark:text-red-500 "
                     >
                       <span class="sr-only"> Remove </span>
                       <svg
@@ -227,24 +227,24 @@ function header() {
                   <div>
                     <a
                       href="#"
-                      class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline"
+                      class="truncate text-sm font-semibold leading-none text-gray-900  hover:underline"
                     >
                       Apple Watch SE
                     </a>
-                    <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
+                    <p class="mt-0.5 truncate text-sm font-normal text-gray-500 ">
                       $598
                     </p>
                   </div>
 
                   <div class="flex items-center justify-end gap-6">
-                    <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">
+                    <p class="text-sm font-normal leading-none text-gray-500 ">
                       Qty: 2
                     </p>
 
                     <button
                       data-tooltip-target="tooltipRemoveItem3b"
                       type="button"
-                      class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600"
+                      class="text-red-600 hover:text-red-700 dark:text-red-500 "
                     >
                       <span class="sr-only"> Remove </span>
                       <svg
@@ -276,24 +276,24 @@ function header() {
                   <div>
                     <a
                       href="#"
-                      class="truncate text-sm font-semibold leading-none text-gray-900 dark:text-white hover:underline"
+                      class="truncate text-sm font-semibold leading-none text-gray-900  hover:underline"
                     >
                       Sony Playstation 5
                     </a>
-                    <p class="mt-0.5 truncate text-sm font-normal text-gray-500 dark:text-gray-400">
+                    <p class="mt-0.5 truncate text-sm font-normal text-gray-500 ">
                       $799
                     </p>
                   </div>
 
                   <div class="flex items-center justify-end gap-6">
-                    <p class="text-sm font-normal leading-none text-gray-500 dark:text-gray-400">
+                    <p class="text-sm font-normal leading-none text-gray-500 ">
                       Qty: 1
                     </p>
 
                     <button
                       data-tooltip-target="tooltipRemoveItem4b"
                       type="button"
-                      class="text-red-600 hover:text-red-700 dark:text-red-500 dark:hover:text-red-600"
+                      class="text-red-600 hover:text-red-700 dark:text-red-500 "
                     >
                       <span class="sr-only"> Remove </span>
                       <svg
