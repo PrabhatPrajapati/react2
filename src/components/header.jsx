@@ -8,7 +8,7 @@ import { MdLanguage } from "react-icons/md";
 function header() {
   return (
     <>
-      <nav class="bg-white  antialiased shadow-md ">
+      <nav class="bg-white  antialiased shadow-md z-20 ">
         <div class="max-w-7xl px-4 mx-auto 2xl:px-0 py-2 ">
           <div class="flex items-center justify-between">
             <div class="flex items-center space-x-8">
