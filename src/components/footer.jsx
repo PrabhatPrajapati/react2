@@ -8,10 +8,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
-
-
-
-
 function footer() {
   return (
     <>
@@ -26,7 +22,7 @@ function footer() {
               >
                 <img src={logo} alt="" />
               </a>
-              <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left font">
+              <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left font font-medium  text-[14px] font-quicksand">
                 Where every game is a lesson, and every lesson is a game. Our
                 app transforms education into playful games, captivating young
                 minds with interactive fun.
@@ -41,28 +37,20 @@ function footer() {
                   <FaInstagram className="h-[25px] w-[25px]" />
                   <FaLinkedin className="h-[25px] w-[25px]" />
                   <FaGoogle className="h-[25px] w-[25px]" />
-                  <FaYoutube  className="h-[25px] w-[25px]"/>
-
-
-                 
-
-
-
-
-
-                 </a>
+                  <FaYoutube className="h-[25px] w-[25px]" />
+                </a>
               </div>
             </div>
             {/* <!--End Col--> */}
-            <div class="lg:mx-auto text-center sm:text-left">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">
+            <div class="lg:text-right text-center sm:text-left">
+              <h4 class="text-lg text-gray-900 font-bold mb-7 font-quicksand text-[16px] ">
                 Quick links
               </h4>
-              <ul class="text-sm  transition-all duration-500">
+              <ul class="text-sm  transition-all duration-500 lg:mr-5">
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class="text-gray-600 hover:text-gray-900"
+                    class="text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold "
                   >
                     Home
                   </a>
@@ -70,7 +58,7 @@ function footer() {
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
                   >
                     Games
                   </a>
@@ -78,7 +66,7 @@ function footer() {
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
                   >
                     Subjects
                   </a>
@@ -86,7 +74,7 @@ function footer() {
                 <li>
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
                   >
                     About
                   </a>
@@ -94,13 +82,15 @@ function footer() {
               </ul>
             </div>
             {/* <!--End Col--> */}
-            <div class="lg:mx-auto text-center sm:text-left">
-              <h4 class="text-lg text-gray-900 font-medium mb-7">Company</h4>
-              <ul class="text-sm  transition-all duration-500">
+            <div class="lg:text-right text-center sm:text-left">
+              <h4 class="text-lg text-gray-900 font-bold mb-7 font-quicksand text-[16px] ">
+                Company
+              </h4>
+              <ul class="text-sm  transition-all duration-500  lg:mr-5">
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class="text-gray-600 hover:text-gray-900"
+                    class="text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
                   >
                     About
                   </a>
@@ -108,7 +98,7 @@ function footer() {
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
                   >
                     Feature
                   </a>
@@ -116,7 +106,7 @@ function footer() {
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
                   >
                     Works
                   </a>
@@ -124,7 +114,7 @@ function footer() {
                 <li>
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
                   >
                     Career
                   </a>
@@ -177,27 +167,36 @@ function footer() {
           {/* <!--Grid--> */}
           <div class="py-7 border-t border-gray-200">
             <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-              <span class="text-sm text-gray-500 ">
-                ©<a href="https://pagedone.io/">pagedone</a>2024, All rights
-                reserved.
-              </span>
               <ul class="flex items-center gap-9 mt-4 lg:mt-0">
                 <li>
-                  <a href="javascript:;" class="text-sm text-gray-500">
-                    Terms
+                  <a
+                    href="javascript:;"
+                    class="text-sm  font-quicksand text-[14px] font-semibold text-black"
+                  >
+                    Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:;" class="text-sm text-gray-500">
-                    Privacy
+                  <a
+                    href="javascript:;"
+                    class="text-sm font-quicksand text-[14px] font-semibold text-black"
+                  >
+                    Terms & Conditions
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:;" class="text-sm text-gray-500">
-                    Cookies
+                  <a
+                    href="javascript:;"
+                    class="text-sm font-quicksand text-[14px] font-semibold text-black"
+                  >
+                    Support
                   </a>
                 </li>
               </ul>
+              <span class="text-sm text-black font-quicksand text-[14px] font-semibold ">
+                ©<a href="https://pagedone.io/">Copyright</a> 2024, All Rights
+                Reserved reserved.
+              </span>
             </div>
           </div>
         </div>

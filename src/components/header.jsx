@@ -1,5 +1,9 @@
 import React from "react";
 import logo from "../assets/logo.svg"
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { MdLanguage } from "react-icons/md";
+
+
 
 function header() {
   return (
@@ -16,7 +20,7 @@ function header() {
                     alt=""
                   />
                   <img
-                    class="hidden w-auto h-4 dark:block"
+                    class="hidden w-auto h-4 "
                     src={logo}
                     alt=""
                   />
@@ -27,51 +31,59 @@ function header() {
             </div>
 
             <div>
-            <ul class="hidden lg:flex items-center justify-center gap-6 md:gap-8 py-3 sm:justify-center font-poppins">
+            <ul class="hidden lg:flex items-center justify-center gap-6 md:gap-8 py-3 sm:justify-center font-poppins ">
                 <li>
                   <a
                     href="#"
                     title=""
-                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700  "
+                    class="flex text-sm font-light text-gray-900 hover:text-primary-700  "
                   >
                     Start Here
+                    <RiArrowDropDownLine className="mt-1"/>
                   </a>
+                  
+
                 </li>
                 <li class="shrink-0">
                   <a
                     href="#"
                     title=""
-                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700  "
+                    class="flex text-sm font-light text-gray-900 hover:text-primary-700  "
                   >
                     Solutions
+                    <RiArrowDropDownLine className="mt-1"/>
                   </a>
                 </li>
                 <li class="shrink-0">
                   <a
                     href="#"
                     title=""
-                    class="flex text-sm font-medium text-gray-900 hover:text-primary-700 "
+                    class="flex text-sm font-light text-gray-900 hover:text-primary-700 "
                   >
                     Success Stories
+                    <RiArrowDropDownLine className="mt-1"/>
                   </a>
                 </li>
                 <li class="shrink-0">
-                  <a
+                <a
                     href="#"
                     title=""
-                    class="text-sm font-medium text-gray-900 hover:text-primary-700 "
+                    class="flex text-sm font-light text-gray-900 hover:text-primary-700 "
                   >
                     Resources
+                    <RiArrowDropDownLine className="mt-1"/>
                   </a>
                 </li>
                 <li class="shrink-0">
-                  <a
+                <a
                     href="#"
                     title=""
-                    class="text-sm font-medium text-gray-900 hover:text-primary-700 "
+                    class="flex text-sm font-light text-gray-900 hover:text-primary-700 "
                   >
-                    Sell
+                   Sell
+                    <RiArrowDropDownLine className="mt-1"/>
                   </a>
+                  
                 </li>
               </ul>
             </div>
@@ -101,9 +113,9 @@ function header() {
                     d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
                   />
                 </svg>
-              
+{/*               
                 <svg
-                  class="hidden sm:flex w-4 h-4 text-gray-900 dark:text-white ms-1"
+                  class="hidden sm:flex w-4 h-4 text-gray-900 ms-1"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -118,7 +130,7 @@ function header() {
                     stroke-width="2"
                     d="m19 9-7 7-7-7"
                   />
-                </svg>
+                </svg> */}
               </button>
 
               <div
@@ -402,6 +414,34 @@ function header() {
                     d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                   />
                 </svg>
+            
+                <svg
+                  class="w-4 h-4 text-gray-900 dark:text-white ms-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 9-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              <button
+                id="userDropdownButton1"
+                data-dropdown-toggle="userDropdown1"
+                type="button"
+                class="inline-flex items-center rounded-lg justify-center  hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white"
+              >
+                <MdLanguage />
+
             
                 <svg
                   class="w-4 h-4 text-gray-900 dark:text-white ms-1"
