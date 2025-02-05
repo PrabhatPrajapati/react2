@@ -356,7 +356,7 @@ function Home() {
                   <span className="px-3 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
                     Batteries
                   </span>
-                  <h3 className="text-lg   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
+                  <h3 className=" font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
                     Song Giang 2 Hydro Power Project
                   </h3>
                 </div>
@@ -385,7 +385,7 @@ function Home() {
                   <span className="px-3 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
                     Batteries
                   </span>
-                  <h3 className="text-lg   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
+                  <h3 className="   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
                     Song Giang 2 Hydro Power Project
                   </h3>
                 </div>
@@ -452,7 +452,7 @@ function Home() {
                   <span className="px-3 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
                     Batteries
                   </span>
-                  <h3 className="text-lg   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
+                  <h3 className="  font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
                     Song Giang 2 Hydro Power Project
                   </h3>
                 </div>
@@ -481,7 +481,7 @@ function Home() {
                   <span className="px-3 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
                     Batteries
                   </span>
-                  <h3 className="text-lg   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
+                  <h3 className="  font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
                     Song Giang 2 Hydro Power Project
                   </h3>
                 </div>

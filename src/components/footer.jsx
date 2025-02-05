@@ -11,7 +11,7 @@ import { FaYoutube } from "react-icons/fa";
 function footer() {
   return (
     <>
-      <footer class="w-full">
+      <footer class="w-full border-t">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           {/* <!--Grid--> */}
           <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4   py-14 max-w-xs mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-full">
