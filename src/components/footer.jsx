@@ -14,7 +14,7 @@ function footer() {
       <footer class="w-full">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           {/* <!--Grid--> */}
-          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-8 py-14 max-w-xs mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-full">
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4   py-14 max-w-xs mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-full">
             <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
               <a
                 href="https://pagedone.io/"
@@ -42,15 +42,15 @@ function footer() {
               </div>
             </div>
             {/* <!--End Col--> */}
-            <div class="lg:text-right text-center sm:text-left">
+            <div class="lg:text-right text-center sm:text-left  -mr-20">
               <h4 class="text-lg text-gray-900 font-bold mb-7 font-quicksand text-[16px] ">
                 Quick links
               </h4>
-              <ul class="text-sm  transition-all duration-500 lg:mr-5">
+              <ul class="text-sm  transition-all duration-500 ">
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class="text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold "
+                    class="text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold cursor-pointer "
                   >
                     Home
                   </a>
@@ -58,7 +58,7 @@ function footer() {
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold cursor-pointer"
                   >
                     Games
                   </a>
@@ -66,7 +66,7 @@ function footer() {
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold cursor-pointer"
                   >
                     Subjects
                   </a>
@@ -74,7 +74,7 @@ function footer() {
                 <li>
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold cursor-pointer"
                   >
                     About
                   </a>
@@ -86,11 +86,11 @@ function footer() {
               <h4 class="text-lg text-gray-900 font-bold mb-7 font-quicksand text-[16px] ">
                 Company
               </h4>
-              <ul class="text-sm  transition-all duration-500  lg:mr-5">
+              <ul class="text-sm  transition-all duration-500  ">
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class="text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
+                    class="text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold cursor-pointer"
                   >
                     About
                   </a>
@@ -98,7 +98,7 @@ function footer() {
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold cursor-pointer"
                   >
                     Feature
                   </a>
@@ -106,7 +106,7 @@ function footer() {
                 <li class="mb-6">
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold cursor-pointer"
                   >
                     Works
                   </a>
@@ -114,7 +114,7 @@ function footer() {
                 <li>
                   <a
                     href="javascript:;"
-                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold"
+                    class=" text-gray-600 hover:text-gray-900 font-quicksand text-[14px] font-semibold cursor-pointer"
                   >
                     Career
                   </a>
@@ -171,7 +171,7 @@ function footer() {
                 <li>
                   <a
                     href="javascript:;"
-                    class="text-sm  font-quicksand text-[14px] font-semibold text-black"
+                    class="text-sm  font-quicksand text-[14px] font-semibold text-black cursor-pointer"
                   >
                     Privacy Policy
                   </a>
@@ -179,7 +179,7 @@ function footer() {
                 <li>
                   <a
                     href="javascript:;"
-                    class="text-sm font-quicksand text-[14px] font-semibold text-black"
+                    class="text-sm font-quicksand text-[14px] font-semibold text-black cursor-pointer"
                   >
                     Terms & Conditions
                   </a>
@@ -187,7 +187,7 @@ function footer() {
                 <li>
                   <a
                     href="javascript:;"
-                    class="text-sm font-quicksand text-[14px] font-semibold text-black"
+                    class="text-sm font-quicksand text-[14px] font-semibold text-black cursor-pointer"
                   >
                     Support
                   </a>
