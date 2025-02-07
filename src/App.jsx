@@ -2,17 +2,15 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
 import './App.css';
-// import './connect.min.css';
-// import './custom.css';
-// import './dark_theme.css';
 
 function App() {
   const location = useLocation();
 
   // Define routes where you don't want Header & Footer
-  const hideHeaderFooterRoutes = ['/login', '/signup'];
+  const hideHeaderFooterRoutes = ['/Login', '/Signup'];
 
-  const shouldHideHeaderFooter = hideHeaderFooterRoutes.includes(location.pathname);
+  // Check if pathname exactly matches or starts with the restricted route
+  const shouldHideHeaderFooter = hideHeaderFooterRoutes.some(route => location.pathname.startsWith(route));
 
   return (
     <>

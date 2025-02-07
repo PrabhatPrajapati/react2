@@ -1,7 +1,6 @@
 // import React from "react";
 // import logo from "../assets/logo.svg";
 
-
 // const login = () => {
 
 //   return (
@@ -86,7 +85,7 @@
 
 //     {/* Left Section (Blue Banner) */}
 //     <div className="md:w-1/2 bg-[#04A2D1] text-white rounded-2xl m-4 flex flex-col justify-center p-8 md:p-12 relative">
-      
+
 //       {/* Logo at the top */}
 //       <div className="absolute top-4  mt-4">
 //         <a href="/" title="" className="text-white">
@@ -160,7 +159,6 @@
 //   </div>
 // </div>
 
-
 //     </>
 //   );
 // };
@@ -168,15 +166,13 @@
 // export default login;
 import React, { useState } from "react";
 // import logo1 from "../assets/logo1.svg";
-import cricle from '../assets/Brand Logo.svg'
+import cricle from "../assets/Brand Logo.svg";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -186,7 +182,6 @@ const Login = () => {
       return;
     }
 
-   
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setError("Please enter a valid email address");
@@ -200,69 +195,92 @@ const Login = () => {
   };
 
   return (
-    <div className="font-poppins flex justify-center items-center min-h-screen bg-gray-200 p-6">
+    <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center md:py-5 md:px-5">
       {/* Outer Container with Shadow & Border */}
-      <div className="flex flex-col md:flex-row w-full max-w-5xl bg-white shadow-xl rounded-lg overflow-hidden border border-gray-300">
+      <div className="flex flex-col md:flex-row w-full max-w-5xl bg-white shadow-xl rounded-lg overflow-hidden border  ">
         {/* Left Section (Blue Banner) */}
-        <div className="md:w-1/2 bg-[#04A2D1] text-white rounded-2xl m-4 flex flex-col justify-center p-8 md:p-12 relative">
+        <div className="md:w-1/2 bg-[#04A2D1] text-white rounded-b-2xl  md:rounded-2xl md:m-2 flex flex-col justify-center p-8 md:p-8  lg:pr-16 relative">
           {/* Logo at the top */}
           <div className="absolute top-4 mt-4">
             <a href="/" title="" className="text-white">
-              <img className="block w-auto h-4 dark:hidden" src={cricle} alt="Logo" />
-              <img className="hidden w-auto h-4 dark:block" src={cricle} alt="Logo" />
+              <img
+                className="block w-auto h-4 dark:hidden"
+                src={cricle}
+                alt="Logo"
+              />
+              <img
+                className="hidden w-auto h-4 dark:block"
+                src={cricle}
+                alt="Logo"
+              />
             </a>
           </div>
 
           {/* Blue background image */}
           {/* <div className="absolute inset-0 opacity-30 z-0 bg-cover bg-center" style={{ backgroundImage: `url('https://via.placeholder.com/800x600')` }}></div> */}
-           <div className="absolute inset-0 opacity-30 z-0 bg-cover bg-center"   style={{ backgroundImage: `url(${cricle})` }}></div>
+          <div
+            className="absolute inset-0 opacity-30 z-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${cricle})` }}
+          ></div>
 
           <div className="relative z-10 mt-16">
-            <h1 className="text-3xl font-bold mb-6 text-left">Connecting Talent to Opportunities</h1>
+            <h1 className="text-3xl font-bold mb-6 text-left">
+              Connecting Talent to Opportunities
+            </h1>
             <p className="text-base md:text-sm text-left">
-              Discover endless opportunities on FreelanceConnect, where talented freelancers and businesses unite.
+              Discover endless opportunities on FreelanceConnect, where talented
+              freelancers and businesses unite.
             </p>
-            <div className="mt-24 hidden sm:block rounded-2xl bg-[#30B0D7] p-4 shadow-lg">
-            <p className="font-light text-white text-base">
-  As a freelancer, finding the right gigs can be challenging, but FreelanceHub made it simple. I love the personalized job recommendations and the ability to showcase my portfolio.
-</p>
+            <div className="hidden sm:block">
+              <div className="mt-44  rounded-2xl bg-[#30B0D7] p-4 shadow-lg">
+                <p className="font-light text-white text-base mt-3 px-3">
+                  As a freelancer, finding the right gigs can be challenging,
+                  but FreelanceHub made it simple. I love the personalized job
+                  recommendations and the ability to showcase my portfolio.
+                </p>
 
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWn4AmqxIjr5ZFKmMcg3j4PjAa6xE5Zm8Zw&s"
-                className="mix-blend-multiply w-20 mt-4"
-                alt="Freelancer testimonial"
-              />
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWn4AmqxIjr5ZFKmMcg3j4PjAa6xE5Zm8Zw&s"
+                  className="mix-blend-multiply w-20 mt-4 px-2"
+                  alt="Freelancer testimonial"
+                />
+              </div>
+              <div className="flex justify-center space-x-2 mt-6 ">
+                <span className="w-1 h-1 bg-white transform rotate-45"></span>
+                <span className="w-1 h-1 bg-white transform rotate-45"></span>
+                <span className="w-1 h-1 bg-white transform rotate-45"></span>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center space-x-2 mt-6">
-  <span className="w-1 h-1 bg-white transform rotate-45"></span>
-  <span className="w-1 h-1 bg-white transform rotate-45"></span>
-  <span className="w-1 h-1 bg-white transform rotate-45"></span>
-</div>
-
         </div>
 
         {/* Right Section (Login Form) */}
-        <div className="md:w-1/2 flex justify-center items-center px-8 py-12 bg-white shadow-xl">
+        <div className="md:w-1/2 flex justify-center items-center px-8 py-12 bg-white ">
           <div className="w-full max-w-sm">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Create your account with us below</h2>
+            <h2 className="text-xl font-bold text-gray-800 mb-4">
+              Create your account with us below
+            </h2>
             {/* <p className="text-sm text-gray-600 mb-6">
               Don't have an account yet? <a href="#" className="text-[#04A2D1] font-semibold">Click here to Sign up</a>
             </p> */}
             <p className="text-sm text-gray-600 mb-6">
-  Don't have an account yet?  
-  <Link to="/signup" className="text-[#04A2D1] font-semibold hover:border-b-2 hover:border-[#04A2D1]">
-  Click here to Sign up
-</Link>
-
-</p>
+              Don't have an account yet?
+              <Link
+                to="/signup"
+                className="text-[#04A2D1] font-semibold hover:border-b-2 hover:border-[#04A2D1]"
+              >
+                Click here to Sign up
+              </Link>
+            </p>
 
             {/* Display Error Message */}
             {error && <div className="text-red-500 mb-4">{error}</div>}
 
             {/* Email Input */}
             <div className="mb-5">
-              <label className="block text-sm font-medium text-gray-700">Email Address</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Email Address
+              </label>
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -274,7 +292,9 @@ const Login = () => {
 
             {/* Password Input */}
             <div className="mb-5">
-              <label className="block text-sm font-medium text-gray-700">Password</label>
+              <label className="block text-sm font-medium text-gray-700">
+                Password
+              </label>
               <input
                 type="password"
                 placeholder="Enter Password"
@@ -286,7 +306,9 @@ const Login = () => {
 
             {/* Forgot Password & Login Button */}
             <div className="flex justify-self-end items-center mb-4">
-              <a href="#" className="text-[#04A2D1] text-sm hover:underline">Forgot Password?</a>
+              <a href="#" className="text-[#04A2D1] text-sm hover:underline">
+                Forgot Password?
+              </a>
             </div>
             <button
               onClick={handleSubmit}
