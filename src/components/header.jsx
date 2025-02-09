@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/logo.svg";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { MdLanguage } from "react-icons/md";
+import Menu from "../assets/grid 01.png"
 
 function header() {
   return (
@@ -12,8 +13,8 @@ function header() {
             <div class="flex items-center space-x-8">
               <div class="shrink-0">
                 <a href="#" title="" class="">
-                  <img class="block w-auto h-4 dark:hidden" src={logo} alt="" />
-                  <img class="hidden w-auto h-4 " src={logo} alt="" />
+                  <img class="block w-auto h-4 " src={logo} alt="" />
+                  {/* <img class="hidden w-auto h-4 " src={logo} alt="" /> */}
                 </a>
               </div>
             </div>
@@ -74,11 +75,12 @@ function header() {
             </div>
 
             <div class="flex items-center lg:space-x-2 gap-4">
+              <div className="hidden md:block">
               <button
                 id="myCartDropdownButton1"
                 data-dropdown-toggle="myCartDropdown1"
                 type="button"
-                class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100  font-normal text-sm  leading-none text-gray-900 "
+                class="inline-flex items-center rounded-lg justify-center p-2 font-normal text-sm  leading-none text-gray-900 "
               >
                 <span class="sr-only font-poppins">Cart</span>
                 {/* <svg
@@ -156,6 +158,7 @@ function header() {
                   />
                 </svg> */}
               </button>
+              </div>
 
               <div
                 id="myCartDropdown1"
@@ -417,11 +420,12 @@ function header() {
                 </a>
               </div>
 
+              <div className="hidden md:block">
               <button
                 id="userDropdownButton1"
                 data-dropdown-toggle="userDropdown1"
                 type="button"
-                class="inline-flex items-center rounded-lg justify-center  hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white"
+                class="inline-flex  items-center rounded-lg justify-center  text-sm font-medium leading-none text-gray-900 "
               >
                 {/* <svg
                   class="w-5 h-5 me-1"
@@ -453,7 +457,7 @@ function header() {
                 </svg>
 
                 <svg
-                  class="w-4 h-4 text-gray-900 dark:text-white ms-1"
+                  class="w-4 h-4 text-gray-900  ms-1"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -470,12 +474,14 @@ function header() {
                   />
                 </svg>
               </button>
+              </div>
 
+              <div className="hidden md:block">
               <button
                 id="userDropdownButton1"
                 data-dropdown-toggle="userDropdown1"
                 type="button"
-                class="inline-flex items-center rounded-lg justify-center  hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white"
+                class="inline-flex items-center rounded-lg justify-center  text-sm font-medium leading-none text-gray-900 "
               >
                 <svg
                   width="17"
@@ -491,7 +497,7 @@ function header() {
                 </svg>
 
                 <svg
-                  class="w-4 h-4 text-gray-900 dark:text-white ms-1"
+                  class="w-4 h-4 text-gray-900  ms-1"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -507,7 +513,9 @@ function header() {
                     d="m19 9-7 7-7-7"
                   />
                 </svg>
+                
               </button>
+              </div>
 
               <div
                 id="userDropdown1"
@@ -587,25 +595,10 @@ function header() {
                 data-collapse-toggle="ecommerce-navbar-menu-1"
                 aria-controls="ecommerce-navbar-menu-1"
                 aria-expanded="false"
-                class="inline-flex lg:hidden items-center justify-center hover:bg-gray-100 rounded-md dark:hover:bg-gray-700 p-2 text-gray-900 dark:text-white"
+                class="inline-flex lg:hidden items-center justify-center hover:bg-gray-100 rounded-md  p-2 text-gray-900 border "
               >
                 <span class="sr-only">Open Menu</span>
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                    d="M5 7h14M5 12h14M5 17h14"
-                  />
-                </svg>
+               <img src={Menu} alt="" />
               </button>
             </div>
           </div>

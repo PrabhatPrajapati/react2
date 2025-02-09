@@ -18,11 +18,11 @@ function footer() {
             <div class="col-span-full mb-10 lg:col-span-2 lg:mb-0">
               <a
                 href="https://pagedone.io/"
-                class="flex justify-center lg:justify-start h-4"
+                class="flex justify-start md:justify-center lg:justify-start h-4"
               >
                 <img src={logo} alt="" />
               </a>
-              <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left font font-medium  text-[14px] font-quicksand">
+              <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-start md:text-center lg:text-left font font-medium  text-[14px] font-quicksand">
                 Where every game is a lesson, and every lesson is a game. Our
                 app transforms education into playful games, captivating young
                 minds with interactive fun.
@@ -30,7 +30,7 @@ function footer() {
               <div class="flex mt-4 space-x-4 justify-center lg:justify-start sm:mt-0 ">
                 <a
                   href="javascript:;"
-                  class=" rounded-full  flex justify-center items-center gap-5"
+                  class=" rounded-full  flex justify-between items-center gap-8"
                 >
                   <FaFacebook className="h-[25px] w-[25px]" />
                   <FaXTwitter className="h-[25px] w-[25px]" />
@@ -42,7 +42,7 @@ function footer() {
               </div>
             </div>
             {/* <!--End Col--> */}
-            <div class="lg:text-right text-center sm:text-left  -mr-20">
+            <div class="lg:text-right md:text-center text-left  md:-mr-20">
               <h4 class="text-lg text-gray-900 font-bold mb-7 font-quicksand text-[16px] ">
                 Quick links
               </h4>
@@ -82,7 +82,7 @@ function footer() {
               </ul>
             </div>
             {/* <!--End Col--> */}
-            <div class="lg:text-right text-center sm:text-left">
+            <div class="lg:text-right md:text-center text-right">
               <h4 class="text-lg text-gray-900 font-bold mb-7 font-quicksand text-[16px] ">
                 Company
               </h4>
@@ -165,7 +165,7 @@ function footer() {
             </div> */}
           </div>
           {/* <!--Grid--> */}
-          <div class="py-7 border-t border-gray-200">
+          <div class="hidden md:block py-7 border-t border-gray-200">
             <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
               <ul class="flex items-center gap-9 mt-4 lg:mt-0">
                 <li>
@@ -198,6 +198,11 @@ function footer() {
                 Reserved reserved.
               </span>
             </div>
+          </div>
+
+          <div className=" flex border-t h-[64px]  md:hidden justify-center items-center">
+            <p className="text-center font-poppins text-[16px] font-medium
+">© Copyright 2025 - <span className="text-sky-500 ">Circle-O</span></p>
           </div>
         </div>
       </footer>
