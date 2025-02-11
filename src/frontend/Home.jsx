@@ -349,48 +349,48 @@ function Home() {
               </div>
             </div>
             
-            <div className="grid mt-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Card 1 */}
-              <div className="bg-gradient-to-r w-[360px]  md:w-[383px] h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
-                <div className="mt-auto">
-                  <span className="px-3 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
-                    Batteries
-                  </span>
-                  <h3 className=" font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden w-full h-[380px]">
-                <img
-                  src={Card1}
-                  alt="Hydro Power Project"
-                  className="w-full object-cover   h-[380px]"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className=" font-medium text-white font-poppins text-[16px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="bg-gradient-to-r w-[360px]  md:w-[383px] h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
-                <div className="mt-auto">
-                  <span className="px-3 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
-                    Batteries
-                  </span>
-                  <h3 className="   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-            </div>
+            <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 mt-9">
+                        {/* Card 1 */}
+                        <div className="bg-gradient-to-r w-[363px] h-[344px]  md:w-[383px] md:h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
+                          <div className="mt-auto">
+                            <span className="px-3 md:px-0 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
+                              Batteries
+                            </span>
+                            <h3 className="   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
+                              Song Giang 2 Hydro Power Project
+                            </h3>
+                          </div>
+                        </div>
+            
+                        {/* Card 2 */}
+                        <div className="relative rounded-lg shadow-md overflow-hidden w-[363px] md:w-[383px] md:h-[380px]  h-[344px] ">
+                          <img
+                            src={Card1}
+                            alt="Hydro Power Project"
+                            className="w-[363px] object-cover md:h-[409px]  md:w-[383px] h-[344px] "
+                          />
+                          {/* Gradient Overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                          {/* Text Content */}
+                          <div className="absolute bottom-0 left-0 p-4 mb-2">
+                            <h3 className=" font-medium text-white font-poppins text-[16px]">
+                              Song Giang 2 Hydro Power Project
+                            </h3>
+                          </div>
+                        </div>
+            
+                        {/* Card 3 */}
+                        <div className="bg-gradient-to-r w-[363px] h-[344px]  md:w-[383px] md:h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
+                          <div className="mt-auto">
+                            <span className="px-3 md:px-0 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
+                              Batteries
+                            </span>
+                            <h3 className="   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px] ">
+                              Song Giang 2 Hydro Power Project
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
               {/* Card 1 */}

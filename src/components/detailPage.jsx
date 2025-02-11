@@ -497,7 +497,7 @@ const detailPage = () => {
           <p className="uppercase font-semibold text-[24px]  ">
             View similar products
           </p>
-          <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-9">
+          <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 mt-9">
             {/* Card 1 */}
             <div className="bg-gradient-to-r w-[363px] h-[344px]  md:w-[383px] md:h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
               <div className="mt-auto">

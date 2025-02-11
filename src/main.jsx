@@ -9,7 +9,7 @@ import {
 import Home from './frontend/Home.jsx';
 import Signin from './components/Signin.jsx';
 import Login from './components/login.jsx';
-import Sidebar from './admin/components/sideBar.jsx';
+import Admin from './admin/index.jsx';
 import DetailPage from './components/detailPage.jsx';
 
 
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
         element : <Signin/>
       },
       {
-        path : "/sidebar",
-        element : <Sidebar/>
+        path : "/admin",
+        element : <Admin/>
       },
     ]
   },
