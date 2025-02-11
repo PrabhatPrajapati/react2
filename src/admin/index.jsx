@@ -1,10 +1,13 @@
 import React from "react";
+import SideBar from "./components/sideBar";
+import { X, Pencil } from "lucide-react";
+import bottle from '../assets/bottle.png'
 
 const index = () => {
   return (
     <>
       <div class="connect-container align-content-stretch d-flex flex-wrap">
-        <div class="page-sidebar">
+        {/* <div class="page-sidebar">
           <div class="logo-box">
             <a href="#" class="logo-text">
               Connect
@@ -192,7 +195,8 @@ const index = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
+        <SideBar />
         <div class="page-container">
           <div class="page-header">
             <nav class="navbar navbar-expand">
@@ -322,7 +326,7 @@ const index = () => {
                 </a>
               </div>
             </div>
-            <div class="main-wrapper">
+            {/* <div class="main-wrapper">
               <div class="row stats-row">
                 <div class="col-lg-4 col-md-12">
                   <div class="card card-transparent stats-card">
@@ -496,14 +500,91 @@ const index = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div class="page-footer">
+          {/* <div class="page-footer">
             <div class="row">
               <div class="col-md-12">
                 <span class="footer-text">2019 © stacks</span>
               </div>
             </div>
+          </div> */}
+
+<div className="mt-6 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4].map((_, index) => (
+              <div
+                key={index}
+                className="w-full max-w-[356px] h-[344px] rounded-[6px]  border p-4 bg-white relative"
+              >
+                {/* Edit & Close Buttons */}
+                <div className="absolute top-[-12px] right-[8px] flex space-x-2">
+                  <button className="w-[24px] h-[24px] flex items-center justify-center bg-gray-200 rounded-full shadow">
+                    <Pencil size={12} />
+                  </button>
+                  <button className="w-[24px] h-[24px] flex items-center justify-center bg-red-200 rounded-full shadow">
+                    <X size={12} />
+                  </button>
+                </div>
+
+                {/* Image & Title Section */}
+                <div className="flex items-center space-x-4">
+                  <img
+                    src={bottle}
+                    alt="Plastic Waste"
+                    className="w-[80px] h-[84px] rounded-[6px] object-cover"
+                  />
+                  <div>
+                    <p className="text-green-600 font-semibold text-xs">
+                      2024-2025
+                    </p>
+                    <h4 className="text-base font-bold leading-tight truncate whitespace-nowrap overflow-hidden">
+                      Plastic credit - Cat I available
+                    </h4>
+                    <p className="text-gray-500 text-sm">Plastic Waste</p>
+                  </div>
+                </div>
+
+                {/* Details Section */}
+                <div className="flex justify-center mt-2">
+                  <div className="w-full max-w-[327px] h-[220px] p-3 rounded-[6px] text-sm bg-[#F3F8FC]">
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                      <div>
+                        <p className="font-semibold">EPR Reg. Number</p>
+                        <p className="text-gray-700">E1234567</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Recycler Type</p>
+                        <p className="text-gray-700">Category I</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Product Type</p>
+                        <p className="text-gray-700">Recycler</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Credit Type</p>
+                        <p className="text-gray-700">Recycling</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Unit</p>
+                        <p className="text-gray-700">Tonne</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Credit Available</p>
+                        <p className="text-gray-700">1000</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Minimum Purchase</p>
+                        <p className="text-gray-700">150</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Price per credit (Rs.)</p>
+                        <p className="text-gray-700">INR 1000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

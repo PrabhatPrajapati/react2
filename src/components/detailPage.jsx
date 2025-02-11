@@ -47,7 +47,7 @@ const detailPage = () => {
         </div> */}
         <div className="relative bg-opacity-75 w-full h-[409px]  md:h-[400px] max-w-7xl mx-auto">
           <div className=" py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl   lg:py-10 flex flex-col h-full">
-            <div className="lg:pl-10 xl:pl-0 md:pl-10  flex flex-col justify-between h-full px-4">
+            <div className="lg:pl-10 xl:pl-0 md:pl-10  flex flex-col justify-between h-full ">
               {/* Text Section (at the top) */}
 
               {/* Button Section (at the bottom) */}
@@ -178,7 +178,7 @@ const detailPage = () => {
             <button className="w-full py-2 bg-[#04A2D1] text-white rounded-md border border-[#0E7897] hover:bg-[#04A2D1]transition text-[16px] font-semibold">
               Buy Now
             </button>
-            <button onClick={handleModalToggle} className="w-full py-2 bg-white text-[#04A2D0] rounded-md border border-[#04A2D0] hover:bg-[#04A2D1] hover:text-white transition text-[16px] font-semibold">
+            <button onClick={handleModalToggle} className="w-full py-2 bg-white text-[#04A2D0] rounded-md border border-[#04A2D0] hover:bg-[#04A2D1]  transition text-[16px] font-semibold">
               Make An Offer
             </button>
             <button className="w-full py-2 text-[#04A2D1] rounded-md hover:underline transition underline" >
@@ -373,7 +373,7 @@ const detailPage = () => {
 
         {/* Right Section (40%) - Payment Card */}
         <div className="w-full sm:w-[30%]  lg:-mt-56 z-20 ml-8 hidden md:block">
-          <div className=" w-[433px] h-[643px] mx-auto p-6 bg-white rounded-lg shadow-[0px_2px_18px_0px_rgba(0,0,0,0.12)]">
+          <div className=" w-[433px] h-[680px] mx-auto p-6 bg-white rounded-lg shadow-[0px_2px_18px_0px_rgba(0,0,0,0.12)]">
             <h2 className="text-xl font-semibold text-gray-800 mb-4  text-[18px] font-poppins mt-3 ">
               Review Payment
             </h2>
@@ -478,7 +478,7 @@ const detailPage = () => {
               <button className="w-full py-2 bg-[#04A2D1] text-white rounded-md border border-[#0E7897] hover:bg-[#04A2D1]transition text-[16px] font-semibold">
                 Buy Now
               </button>
-              <button onClick={handleModalToggle} className="w-full py-2 bg-white text-[#04A2D0] rounded-md border border-[#04A2D0] hover:bg-[#04A2D1] hover:text-white transition text-[16px] font-semibold">
+              <button onClick={handleModalToggle} className="w-full py-2 bg-white text-[#04A2D0] rounded-md border border-[#04A2D0] hover:bg-[#04A2D1] transition text-[16px] font-semibold">
                 Make An Offer
               </button>
               <button className="w-full py-2 text-[#04A2D1] rounded-md hover:underline transition">

@@ -3,8 +3,14 @@ import logo from "../assets/logo.svg";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { MdLanguage } from "react-icons/md";
 import Menu from "../assets/grid 01.png"
+import { useState } from "react";
 
 function header() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+  
+  
   return (
     <>
       <nav class="bg-white  antialiased shadow-md z-20 ">
@@ -589,7 +595,7 @@ function header() {
                   </a>
                 </div>
               </div>
-
+{/* 
               <button
                 type="button"
                 data-collapse-toggle="ecommerce-navbar-menu-1"
@@ -599,7 +605,200 @@ function header() {
               >
                 <span class="sr-only">Open Menu</span>
                <img src={Menu} alt="" />
-              </button>
+              </button> */}
+
+               {/* Toggle Button */}
+               <div className="relative">
+     
+      {/* <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="inline-flex lg:hidden items-center justify-center hover:bg-gray-100 rounded-md p-2 text-gray-900 border"
+      >
+        <span className="sr-only">Open Menu</span>
+        <img src={Menu} alt="Menu" className="w-6 h-6" />
+      </button>
+
+      
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+
+      
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out lg:hidden`}
+      >
+        
+        <button
+          className="p-4 text-gray-900"
+          onClick={() => setIsOpen(false)}
+        >
+          ✕
+        </button>
+
+    
+        <nav className="flex flex-col p-4 space-y-4">
+  <div>
+    <a
+      href="#"
+      title=""
+      className="flex text-sm font-light text-gray-900 hover:text-primary-700"
+    >
+      Start Here
+      <RiArrowDropDownLine className="mt-1" />
+    </a>
+  </div>
+  <div className="shrink-0">
+    <a
+      href="#"
+      title=""
+      className="flex text-sm font-light text-gray-900 hover:text-primary-700"
+    >
+      Solutions
+      <RiArrowDropDownLine className="mt-1" />
+    </a>
+  </div>
+  <div className="shrink-0">
+    <a
+      href="#"
+      title=""
+      className="flex text-sm font-light text-gray-900 hover:text-primary-700"
+    >
+      Success Stories
+      <RiArrowDropDownLine className="mt-1" />
+    </a>
+  </div>
+  <div className="shrink-0">
+    <a
+      href="#"
+      title=""
+      className="flex text-sm font-light text-gray-900 hover:text-primary-700"
+    >
+      Resources
+      <RiArrowDropDownLine className="mt-1" />
+    </a>
+  </div>
+  <div className="shrink-0">
+    <a
+      href="#"
+      title=""
+      className="flex text-sm font-light text-gray-900 hover:text-primary-700"
+    >
+      Sell
+      <RiArrowDropDownLine className="mt-1 text-[15px]" />
+    </a>
+
+
+            
+  </div>
+
+            
+              
+</nav> */}
+
+<button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="lg:hidden flex items-center justify-center p-2 rounded-md border text-gray-900 hover:bg-gray-100"
+       >
+        <span className="sr-only">Open Menu</span>
+        <img src={Menu} alt="Menu"  />
+      </button>
+
+      
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+
+  
+      <div
+        className={`fixed top-0 left-0 h-screen w-72 bg-white shadow-xl z-50 transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out lg:hidden`}
+      >
+      
+        <button
+          className="p-4 text-gray-900 font-bold text-xl"
+          onClick={() => setIsOpen(false)}
+        >
+          ✕
+        </button>
+
+        {/* Navigation Links */}
+        <nav className="flex flex-col p-6 space-y-6 text-base">
+          {["Start Here", "Solutions", "Success Stories", "Resources", "Sell"].map((item) => (
+            <div key={item} className="relative group">
+              <a
+                href="#"
+                className="flex items-center justify-between w-full text-gray-900 hover:text-blue-600 py-2"
+              >
+                {item} <RiArrowDropDownLine className="text-2xl" />
+              </a>
+              {/* Dropdown Menu */}
+              <div className="hidden group-hover:block absolute left-0 mt-2 w-56 bg-white shadow-lg border rounded-md p-3 z-50">
+                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Sub-item 1
+                </a>
+               
+              </div>
+            </div>
+          ))}
+        </nav>
+
+        {/* Cart & Profile */}
+        <div className="flex justify-between items-center p-6 border-t">
+          {/* Cart Button */}
+          <div className="relative">
+            <button
+              onClick={() => setIsCartOpen(!isCartOpen)}
+              className="text-gray-900 hover:text-blue-600 text-xl"
+            >
+              🛒
+            </button>
+            {isCartOpen && (
+              <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg border rounded-md p-3">
+                <p className="text-gray-700">Your cart is empty</p>
+              </div>
+            )}
+          </div>
+
+          {/* Profile Button */}
+          <div className="relative font-poppins">
+            <button
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+              className="text-gray-900 hover:text-blue-600 text-xl"
+            >
+              👤
+            </button>
+            {isProfileOpen && (
+              <div className="absolute right-0 mt-2 w-56 bg-white shadow-lg border rounded-md p-3">
+                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Profile
+                </a>
+                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Settings
+                </a>
+                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  Logout
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+
+    </div>
             </div>
           </div>
 
@@ -658,7 +857,7 @@ function header() {
               </li>
             </ul>
           </div>
-        </div>
+        {/* </div> */}
       </nav>
     </>
   );
