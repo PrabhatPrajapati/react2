@@ -11,6 +11,18 @@ import Signin from './components/Signin.jsx';
 import Login from './components/login.jsx';
 import Admin from './admin/index.jsx';
 import DetailPage from './components/detailPage.jsx';
+import Dashboard from './admin/dashboard.jsx';
+import Createoffer from './admin/createOffers.jsx';
+import CreateOffer2 from './admin/createOffer2.jsx';
+import TransactionHistory from './admin/transactionHistory.jsx';
+import EprAccount from './admin/eprAccount.jsx';
+import CreateOffers3 from './admin/createOffers3.jsx';
+import Dashboard2 from './admin/dashboard2.jsx';
+import EprAccount2 from './admin/eprAccount2.jsx';
+import EprAccount3 from './admin/eprAccount3.jsx';
+import EprAccount4 from './admin/eprAccount4.jsx';
+import EprAccount5 from './admin/eprAccount5.jsx';
+import EprAccount6 from './admin/eprAccount6.jsx';
 
 
 const router = createBrowserRouter([
@@ -28,17 +40,66 @@ const router = createBrowserRouter([
         element : <DetailPage/>
       },
       {
-        path : "/Login",
+        path : "/login",
         element : <Login/>
       },
       {
-        path : "/Signup",
+        path : "/signup",
         element : <Signin/>
       },
       {
         path : "/admin",
         element : <Admin/>
       },
+      {
+        path : "/dashboard",
+        element : <Dashboard/>
+      },
+      {
+        path : "/createoffers",
+        element : <Createoffer/>
+      },
+      {
+        path : "/createoffers2",
+        element : <CreateOffer2/>
+      },
+      {
+        path : "/transactionHistory",
+        element : <TransactionHistory />
+      },
+      {
+        path : "/eprAccount",
+        element : <EprAccount />
+      },
+      {
+        path : "/createOffers3",
+        element : <CreateOffers3 />
+      },
+      {
+        path : "/dashboard2",
+        element : <Dashboard2/>
+      },
+      {
+        path : "/eprAccount2",
+        element : <EprAccount2/>
+      },
+      {
+        path : "/eprAccount3",
+        element : <EprAccount3/>
+      },
+      {
+        path : "/eprAccount4",
+        element : <EprAccount4/>
+      },
+      {
+        path : "/eprAccount5",
+        element : <EprAccount5/>
+      },
+      {
+        path : "/eprAccount6",
+        element : <EprAccount6/>
+      },
+
     ]
   },
 ])

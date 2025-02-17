@@ -213,7 +213,6 @@ function Home() {
                 )
               )}
             </div>
-
             <div className="relative">
               {/* Filter Button */}
               <div className="hidden sm:flex flex-col gap-y-5 sm:mt-10 sm:flex-row sm:gap-y-0 sm:gap-x-6">
@@ -228,7 +227,7 @@ function Home() {
 
               {/* Sliding Filter Sidebar */}
               <div
-                className={`fixed top-0 right-0  w-[300px] max-w-full bg-gray-50 shadow-lg p-6 z-50 transition-transform duration-300 ${
+                className={`fixed top-0 right-0 h-full w-[300px] max-w-full bg-gray-50 shadow-lg p-6 z-50 transition-transform duration-300 ${
                   showFilter ? "translate-x-0" : "translate-x-full"
                 }`}
               >
@@ -250,7 +249,7 @@ function Home() {
                       (filter, index) => (
                         <div
                           key={index}
-                          className="bg-white p-5 rounded-md mt-5 mb-5"
+                          className="bg-white p-4 rounded-md mt-5 mb-5"
                         >
                           <h3 className="text-sm font-medium text-gray-700 mb-2">
                             {filter}
@@ -296,194 +295,295 @@ function Home() {
           {/* End filter section  */}
 
           <div class="w-full mx-auto py-10 px-4 md:px-8 max-w-7xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Card 1 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden">
+            {/*  */}
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+                <div>
+                  <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
+                    Song Giang 2 Hydro Power Project
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-blue-500 p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative bg-black text-white p-6 rounded-xl shadow-lg overflow-hidden h-[380px] flex flex-col justify-end">
+                {/* <img src="https://source.unsplash.com/500x300/?volcano" alt="Project Image" class="absolute inset-0 w-full h-full object-cover opacity-50"> */}
                 <img
                   src={Card1}
                   alt="Hydro Power Project"
-                  className="w-full h-[380px]  object-cover"
+                  className="w-full object-cover   h-[380px] absolute inset-0  opacity-50"
                 />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className=" font-medium text-white font-poppins text-[16px]">
+                <div class="relative z-10">
+                <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
                     Song Giang 2 Hydro Power Project
-                  </h3>
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-black p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Card 2 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden">
+              <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+                <div>
+                <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
+                    Song Giang 2 Hydro Power Project
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-green-500 bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+                <div>
+                  <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
+                    Song Giang 2 Hydro Power Project
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-blue-500 p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative bg-black text-white p-6 rounded-xl shadow-lg overflow-hidden h-[380px] flex flex-col justify-end">
+                {/* <img src="https://source.unsplash.com/500x300/?volcano" alt="Project Image" class="absolute inset-0 w-full h-full object-cover opacity-50"> */}
                 <img
                   src={Card1}
                   alt="Hydro Power Project"
-                  className="w-full h-[380px]  object-cover"
+                  className="w-full object-cover   h-[380px] absolute inset-0  opacity-50"
                 />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className=" font-medium text-white font-poppins text-[16px]">
+                <div class="relative z-10">
+                <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
                     Song Giang 2 Hydro Power Project
-                  </h3>
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-black p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Card 3 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden">
+              <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+                <div>
+                <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
+                    Song Giang 2 Hydro Power Project
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-green-500 bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+                <div>
+                  <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
+                    Song Giang 2 Hydro Power Project
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-blue-500 p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative bg-black text-white p-6 rounded-xl shadow-lg overflow-hidden h-[380px] flex flex-col justify-end">
+                {/* <img src="https://source.unsplash.com/500x300/?volcano" alt="Project Image" class="absolute inset-0 w-full h-full object-cover opacity-50"> */}
                 <img
                   src={Card1}
                   alt="Hydro Power Project"
-                  className="w-full h-[380px] object-cover"
+                  className="w-full object-cover   h-[380px] absolute inset-0  opacity-50"
                 />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className=" font-medium text-white font-poppins text-[16px]">
+                <div class="relative z-10">
+                <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
                     Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 mt-9">
-              {/* Card 1 */}
-              <div className="bg-gradient-to-r w-[363px] h-[344px]  md:w-[383px] md:h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
-                <div className="mt-auto">
-                  <span className="px-3 md:px-0 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
-                    Batteries
-                  </span>
-                  <h3 className="   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-black p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Card 2 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden w-[363px] md:w-[383px] md:h-[380px]  h-[344px] ">
+              <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+                <div>
+                <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
+                    Song Giang 2 Hydro Power Project
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-green-500 bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+                <div>
+                  <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
+                    Song Giang 2 Hydro Power Project
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-blue-500 p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative bg-black text-white p-6 rounded-xl shadow-lg overflow-hidden h-[380px] flex flex-col justify-end">
+                {/* <img src="https://source.unsplash.com/500x300/?volcano" alt="Project Image" class="absolute inset-0 w-full h-full object-cover opacity-50"> */}
                 <img
                   src={Card1}
                   alt="Hydro Power Project"
-                  className="w-[363px] object-cover md:h-[409px]  md:w-[383px] h-[344px] "
+                  className="w-full object-cover   h-[380px] absolute inset-0  opacity-50"
                 />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className=" font-medium text-white font-poppins text-[16px]">
+                <div class="relative z-10">
+                <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
                     Song Giang 2 Hydro Power Project
-                  </h3>
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-black p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Card 3 */}
-              <div className="bg-gradient-to-r w-[363px] h-[344px]  md:w-[383px] md:h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
-                <div className="mt-auto">
-                  <span className="px-3 md:px-0 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
-                    Batteries
-                  </span>
-                  <h3 className="   font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px] ">
+              <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+                <div>
+                <p class=" text-[14px] font-medium font-poppins">
+                    Credit Type | Batteries Waste
+                  </p>
+                  <h2 class="mt-2 text-[18px] font-poppins font-medium ">
                     Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-              {/* Card 1 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden w-full h-[380px]">
-                <img
-                  src={Card1}
-                  alt="Hydro Power Project"
-                  className="w-full object-cover   h-[380px]"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className=" font-medium text-white font-poppins text-[16px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden ">
-                <img
-                  src={Card1}
-                  alt="Hydro Power Project"
-                  className="w-full h-[380px] object-cover"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className=" font-medium text-white font-poppins text-[16px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden">
-                <img
-                  src={Card1}
-                  alt="Hydro Power Project"
-                  className="w-full h-[380px] object-cover"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className="  font-medium text-white font-poppins text-[16px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid mt-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Card 1 */}
-              <div className="bg-gradient-to-r w-[360px]  md:w-[383px] h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
-                <div className="mt-auto">
-                  <span className="px-3 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
-                    Batteries
-                  </span>
-                  <h3 className="  font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="relative rounded-lg shadow-md overflow-hidden w-full h-[380px]">
-                <img
-                  src={Card1}
-                  alt="Hydro Power Project"
-                  className="w-full object-cover   h-[380px]"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 p-4 mb-2">
-                  <h3 className=" font-medium text-white font-poppins text-[16px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="bg-gradient-to-r w-[360px]  md:w-[383px] h-[380px] from-blue-500 to-teal-400 rounded-lg shadow-md p-6 flex flex-col items-start ">
-                <div className="mt-auto">
-                  <span className="px-3 py-1 w-[112px] h-[34px] text-[16px] bg-white text-green-500 font-poppins font-medium text-xs rounded-full mb-6">
-                    Batteries
-                  </span>
-                  <h3 className="  font-semibold text-white font-poppins text-[30px] mt-3 leading-[45px]">
-                    Song Giang 2 Hydro Power Project
-                  </h3>
+                  </h2>
+                  <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
+                  <div class="mt-2 bg-green-500 bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
+                    <p className="mb-1">
+                      Available Credit{" "}
+                      <span class="float-right">12000 tonne</span>
+                    </p>
+                    <p className="text-[14px] font-medium font-poppins">
+                      Minimum Purchase{" "}
+                      <span class="float-right text-[14px] font-light font-poppins">120 tonne</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

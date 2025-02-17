@@ -2,11 +2,17 @@ import React from "react";
 import SideBar from "./components/sideBar";
 import { X, Pencil } from "lucide-react";
 import bottle from '../assets/bottle.png'
+import { useState } from "react";
+import { Search, LogOut, Bell, Folder, Mic } from "lucide-react";
 
 const index = () => {
+  const [search, setSearch] = useState("");
+
   return (
     <>
+
       <div class="connect-container align-content-stretch d-flex flex-wrap">
+
         {/* <div class="page-sidebar">
           <div class="logo-box">
             <a href="#" class="logo-text">
@@ -199,7 +205,38 @@ const index = () => {
         <SideBar />
         <div class="page-container">
           <div class="page-header">
-            <nav class="navbar navbar-expand">
+            <nav className="flex items-center justify-between px-8 py-5  border-b w-full h-[84px]" style={{ left: "280px" }}>
+              {/* Search Bar */}
+              <div className="flex items-center border rounded-lg px-4 py-2  w-[400px] h-[48px] space-x-3">
+                <Search size={28} className="text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="outline-none bg-transparent flex-grow text-lg text-gray-600"
+                />
+                <LogOut size={28} className="text-gray-400 cursor-pointer mr-5" />
+                <Mic size={28} className="text-gray-400 cursor-pointer" />
+              </div>
+
+              {/* Navigation Links */}
+              <div className="flex space-x-10">
+                <a href="#" className="font-semibold text-black">Dashboard</a>
+                <a href="#" className="text-gray-500 hover:text-black">Credit Request</a>
+                <a href="#" className="text-gray-500 hover:text-black">EPR</a>
+                <a href="#" className="text-gray-500 hover:text-black">Offers</a>
+                <a href="#" className="text-gray-500 hover:text-black">History</a>
+              </div>
+
+              {/* Icons */}
+              <div className="flex space-x-4 text-gray-500">
+                <Folder size={24} className="cursor-pointer" />
+                <Bell size={24} className="cursor-pointer" />
+              </div>
+            </nav>
+
+            {/* <nav class="navbar navbar-expand">
               <button
                 class="navbar-toggler"
                 type="button"
@@ -303,11 +340,11 @@ const index = () => {
                   </div>
                 </form>
               </div>
-            </nav>
+            </nav> */}
           </div>
           <div class="page-content">
             <div class="page-info">
-              <nav aria-label="breadcrumb">
+              {/* <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
                     <a href="#">Apps</a>
@@ -316,15 +353,15 @@ const index = () => {
                     Dashboard
                   </li>
                 </ol>
-              </nav>
-              <div class="page-options">
+              </nav> */}
+              {/* <div class="page-options">
                 <a href="#" class="btn btn-secondary">
                   Settings
                 </a>
                 <a href="#" class="btn btn-primary">
                   Upgrade
                 </a>
-              </div>
+              </div> */}
             </div>
             {/* <div class="main-wrapper">
               <div class="row stats-row">
@@ -510,82 +547,82 @@ const index = () => {
             </div>
           </div> */}
 
-<div className="mt-6 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4].map((_, index) => (
-              <div
-                key={index}
-                className="w-full max-w-[356px] h-[344px] rounded-[6px]  border p-4 bg-white relative"
-              >
-                {/* Edit & Close Buttons */}
-                <div className="absolute top-[-12px] right-[8px] flex space-x-2">
-                  <button className="w-[24px] h-[24px] flex items-center justify-center bg-gray-200 rounded-full shadow">
-                    <Pencil size={12} />
-                  </button>
-                  <button className="w-[24px] h-[24px] flex items-center justify-center bg-red-200 rounded-full shadow">
-                    <X size={12} />
-                  </button>
-                </div>
+<div className="mt-6 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {[1, 2, 3].map((_, index) => (
+    <div
+      key={index}
+      className="w-[356px] h-[344px] rounded-lg border shadow-lg p-4 bg-white relative"
+    >
+      {/* Edit & Close Buttons - Shifted Left */}
+      <div className="absolute top-[-15px] right-[16px] flex space-x-2">
+        <button className="w-[32px] h-[32px] flex items-center justify-center bg-white rounded-full shadow-md border border-gray-200">
+          <Pencil size={12} className="text-gray-600" />
+        </button>
+        <button className="w-[32px] h-[32px] flex items-center justify-center bg-white rounded-full shadow-md border border-gray-200">
+          <X size={12} className="text-red-600" />
+        </button>
+      </div>
 
-                {/* Image & Title Section */}
-                <div className="flex items-center space-x-4">
-                  <img
-                    src={bottle}
-                    alt="Plastic Waste"
-                    className="w-[80px] h-[84px] rounded-[6px] object-cover"
-                  />
-                  <div>
-                    <p className="text-green-600 font-semibold text-xs">
-                      2024-2025
-                    </p>
-                    <h4 className="text-base font-bold leading-tight truncate whitespace-nowrap overflow-hidden">
-                      Plastic credit - Cat I available
-                    </h4>
-                    <p className="text-gray-500 text-sm">Plastic Waste</p>
-                  </div>
-                </div>
+      {/* Image & Title Section */}
+      <div className="flex items-center space-x-4">
+        <img
+          src={bottle}
+          alt="Plastic Waste"
+          className="w-[80px] h-[80px] rounded-md object-cover"
+        />
+        <div className="flex-1">
+  <p className="text-green-600 font-light text-xs mb-1">2024-2025</p>
+  <h4 className="text-base font-medium leading-tight">
+    Plastic credit - Cat I available
+  </h4>
+  <p className="text-gray-500 text-sm">Plastic Waste</p>
+</div>
 
-                {/* Details Section */}
-                <div className="flex justify-center mt-2">
-                  <div className="w-full max-w-[327px] h-[220px] p-3 rounded-[6px] text-sm bg-[#F3F8FC]">
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                      <div>
-                        <p className="font-semibold">EPR Reg. Number</p>
-                        <p className="text-gray-700">E1234567</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold">Recycler Type</p>
-                        <p className="text-gray-700">Category I</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold">Product Type</p>
-                        <p className="text-gray-700">Recycler</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold">Credit Type</p>
-                        <p className="text-gray-700">Recycling</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold">Unit</p>
-                        <p className="text-gray-700">Tonne</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold">Credit Available</p>
-                        <p className="text-gray-700">1000</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold">Minimum Purchase</p>
-                        <p className="text-gray-700">150</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold">Price per credit (Rs.)</p>
-                        <p className="text-gray-700">INR 1000</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      </div>
+
+      {/* Details Section */}
+      <div className="mt-3 bg-[#F3F8FC] rounded-[6px] w-[327px] h-[220px] p-1 ml-[-10px]">
+  <div className="grid grid-cols-2  gap-y-3 text-sm p-2">
+    <div className="text-left space-y-1">
+      <p className="font-medium text-xs">EPR Reg. Number</p>
+      <p className="text-gray-700">E1234567</p>
+    </div>
+    <div className="text-right space-y-1">
+      <p className="font-medium text-xs">Recycler Type</p>
+      <p className="text-gray-700">Category I</p>
+    </div>
+    <div className="text-left space-y-1">
+      <p className="font-medium text-xs">Product Type</p>
+      <p className="text-gray-700">Recycler</p>
+    </div>
+    <div className="text-right space-y-1">
+      <p className="font-medium text-xs">Credit Type</p>
+      <p className="text-gray-700">Recycling</p>
+    </div>
+    <div className="text-left space-y-1">
+      <p className="font-medium text-xs">Unit</p>
+      <p className="text-gray-700">Tonne</p>
+    </div>
+    <div className="text-right space-y-1">
+      <p className="font-medium text-xs">Credit Available</p>
+      <p className="text-gray-700">1000</p>
+    </div>
+    <div className="text-left space-y-1">
+      <p className="font-medium text-xs">Minimum Purchase</p>
+      <p className="text-gray-700">150</p>
+    </div>
+    <div className="text-right space-y-1">
+      <p className="font-medium text-xs">Price per credit (Rs.)</p>
+      <p className="text-gray-700">INR 1000</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  ))}
+</div>
+
+
         </div>
       </div>
     </>

@@ -45,30 +45,32 @@ const detailPage = () => {
             </div>
           </div>
         </div> */}
-        <div className="relative bg-opacity-75 w-full h-[409px]  md:h-[400px] max-w-7xl mx-auto">
-          <div className=" py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl   lg:py-10 flex flex-col h-full">
-            <div className="lg:pl-10 xl:pl-0 md:pl-10  flex flex-col justify-between h-full ">
-              {/* Text Section (at the top) */}
+    <div className="relative bg-opacity-75 w-full h-[409px] md:h-[400px] max-w-7xl mx-auto px-4 md:px-10">
+  <div className="py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-10 flex flex-col h-full">
+    <div className="flex flex-col justify-between h-full">
+      {/* Wrapper to ensure same starting position with right gap */}
+      <div className="relative flex flex-col items-start mt-auto space-y-4">
+        {/* Blue Button */}
+        <button
+          className="group inline-flex ring-1 text-[12px] items-center justify-center rounded-full py-2 px-4 text-sm md:text-sky-500 bg-sky-500 md:bg-white font-poppins font-semibold"
+          id="headlessui-menu-button-:r4:"
+          aria-haspopup="true"
+          aria-expanded="false"
+          type="button"
+        >
+          Credit Type | Waste Type
+        </button>
 
-              {/* Button Section (at the bottom) */}
-              <div className="relative flex flex-col items-start sm:flex-none mt-auto ">
-                <button
-                  className="group inline-flex ring-1  sm:mr-3 text-[12px] items-center justify-center rounded-full py-2 px-4 text-sm  text-white md:text-sky-500 bg-sky-500 md:bg-white font-poppins font-semibold "
-                  id="headlessui-menu-button-:r4:"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  type="button"
-                >
-                  Credit Type | Waste Type
-                </button>
+        {/* Heading */}
+        <h2 className="text-[18px] md:text-[32px] text-white font-semibold font-poppins">
+          Generating Renewable Energy by Hydro Power Project
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
 
-                <h2 className=" text-[18px] md:text-[32px] text-white font-semibold  mt-2 font-poppins ">
-                  Generating Renewable Energy by Hydro Power Project
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
 
       {/* for mobile payment  */}

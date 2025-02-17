@@ -164,8 +164,9 @@
 // };
 
 // export default login;
-import React, { useState } from "react";
 // import logo1 from "../assets/logo1.svg";
+import React, { useState } from "react";
+
 import cricle from "../assets/Brand Logo.svg";
 import { Link } from "react-router-dom";
 
@@ -264,10 +265,10 @@ const Login = () => {
               Don't have an account yet? <a href="#" className="text-[#04A2D1] font-semibold">Click here to Sign up</a>
             </p> */}
             <p className="text-sm text-gray-600 mb-6">
-              Don't have an account yet?
+              Don't have an account yet ?<span> </span>
               <Link
                 to="/signup"
-                className="text-[#04A2D1] font-semibold hover:border-b-2 hover:border-[#04A2D1]"
+                className="text-[#04A2D1] font-semibold  "
               >
                 Click here to Sign up
               </Link>
@@ -291,31 +292,32 @@ const Login = () => {
             </div>
 
             {/* Password Input */}
-            <div className="mb-5">
-              <label className="block text-sm font-medium text-gray-700">
-                Password
-              </label>
-              <input
-                type="password"
-                placeholder="Enter Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#04A2D1] focus:outline-none transition-all"
-              />
-            </div>
+            <div className="w-full">
+  <label className="block text-sm font-medium text-gray-700">
+    Password
+  </label>
+  <input
+    type="password"
+    placeholder="Enter Password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    className="mt-2 p-3 w-full border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-[#04A2D1] focus:outline-none transition-all"
+  />
 
-            {/* Forgot Password & Login Button */}
-            <div className="flex justify-self-end items-center mb-4">
-              <a href="#" className="text-[#04A2D1] text-sm hover:underline">
-                Forgot Password?
-              </a>
-            </div>
-            <button
-              onClick={handleSubmit}
-              className="w-1/2 bg-[#04A2D1] text-white p-2 text-lg font-semibold rounded-lg hover:bg-[#019BB1] focus:outline-none focus:ring-2 focus:ring-[#019BB1] transition-all"
-            >
-              Login
-            </button>
+  {/* Forgot Password Link - Ensure it Stays Below the Input */}
+  <div className="flex justify-end mt-2">
+    <a href="#" className="text-[#04A2D1] text-sm hover:underline">
+      Forgot Password?
+    </a>
+  </div>
+</div>
+
+            <button onClick={handleSubmit}
+  type="submit" 
+  className="w-full sm:w-auto py-3 px-20 bg-[#04A2D1] font-normal hover:border-[#04A2D1] text-white rounded-xl mt-5"
+>
+  Create Account
+</button>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import logo1 from "../assets/logo1.svg";
-// import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import cricle from '../assets/Brand Logo.svg'
 const Signin = () => {
   const [Password, SetPassword] = useState(true);
@@ -17,12 +16,12 @@ const Signin = () => {
     <>
       
 
-      <div className=" font-poppins flex justify-center items-center min-h-screen bg-gray-200 p-4">
+      <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center md:py-5 md:px-5">
   {/* Outer Container with Shadow & Border */}
-  <div className="flex flex-col md:flex-row w-full max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden border border-gray-300">
+  <div className="flex flex-col md:flex-row w-full max-w-5xl bg-white shadow-xl rounded-lg overflow-hidden border ">
     
     {/* Blue Section */}
-     <div className="md:w-1/2 bg-[#04A2D1] text-white rounded-2xl m-4 flex flex-col justify-center p-8 md:p-12 relative">
+     <div className="md:w-1/2 bg-[#04A2D1] text-white rounded-b-2xl  md:rounded-2xl md:m-2 flex flex-col justify-center p-8 md:p-8  lg:pr-16 relative">
           
           {/* Logo at the top */}
           <div className="absolute top-4  mt-4">
@@ -32,42 +31,34 @@ const Signin = () => {
             </a>
           </div>
     
-          {/* Blue background image */}
-          {/* <div className="absolute inset-0  opacity-40 z-0"></div>
-    
-          <div className="relative z-10 mt-">
-            <h1 className="text-2xl md:text-3xl font-bold mb-4 text-left">
-              Connecting Talent to Opportunities
-            </h1>
-            <p className="text-sm md:text-base text-left">
-              Discover endless opportunities on FreelanceConnect, where talented freelancers and businesses unite.
-            </p>
-            <div className="mt-12  rounded-2xl  hidden sm:block bg-[#30B0D7] p-6 ">
-                  <p className="font-light text-white ">
-                    As a freelancer, finding the right gigs can be challenging, but
-                    FreelanceHub made it simple, I love the personalized job
-                    recommendations and the ability to showcase my portfolio.
-                  </p>
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWn4AmqxIjr5ZFKmMcg3j4PjAa6xE5Zm8Zw&s"
-                    className="mix-blend-multiply w-20"
-                    alt=""
-                  />
-                </div>
-          </div>
-          <div className="flex justify-center space-x-2 mt-6">
-  <span className="w-1 h-1 bg-white transform rotate-45"></span>
-  <span className="w-1 h-1 bg-white transform rotate-45"></span>
-  <span className="w-1 h-1 bg-white transform rotate-45"></span>
-</div>
-        </div> */}
+       
          <div className="absolute inset-0 opacity-30 z-0 bg-cover bg-center"   style={{ backgroundImage: `url(${cricle})` }}></div>
   
 <div className="relative z-10 mt-16">
-  <h1 className="text-3xl font-bold mb-6 text-left">Connecting Talent to Opportunities</h1>
-  <p className="text-base md:text-base text-left">
-    Discover endless opportunities on FreelanceConnect, where talented freelancers and businesses unite.
-  </p>
+{/* Desktop & Tablet View (≥ 640px) */}
+<h1 className="text-3xl font-bold mb-6 text-left hidden sm:block">
+  Connecting Talent to Opportunities
+</h1>
+<p className="text-base md:text-base text-left hidden sm:block">
+  Discover endless opportunities on FreelanceConnect, where talented freelancers and businesses unite.
+</p>
+
+
+{/* Mobile View (< 640px) */}
+<h1 className="text-3xl font-bold mb-6 text-left sm:hidden w-full">
+  Create your account <span className="block">with us below</span>
+</h1>
+
+<p className="text-sm text-white mb-6 sm:hidden cursor-pointer ">
+  Don't have an account yet ?{" "}
+  <Link
+    to="/signup"
+    className="text-white font-semibold hover:border-b-2 hover:border-[#04A2D1]"
+  >
+    Click here to Sign up
+  </Link>
+</p>
+
  
   <div className="mt-60 hidden sm:block rounded-2xl bg-[#30B0D7] p-4 shadow-lg">
   <p className="font-light text-white text-base">
@@ -81,26 +72,33 @@ const Signin = () => {
   />
 </div>
 </div>
-<div className="flex justify-center space-x-2 mt-6">
-<span className="w-1 h-1 bg-white transform rotate-45"></span>
-<span className="w-1 h-1 bg-white transform rotate-45"></span>
-<span className="w-1 h-1 bg-white transform rotate-45"></span>
+<div className="hidden sm:flex justify-center space-x-2 mt-6">
+  <span className="w-1 h-1 bg-white transform rotate-45"></span>
+  <span className="w-1 h-1 bg-white transform rotate-45"></span>
+  <span className="w-1 h-1 bg-white transform rotate-45"></span>
 </div>
+
 
 </div>
 
     
     {/* Right Section (Form) */}
     <div className="w-full md:w-1/2 bg-white p-6 md:p-10">
-      <div className="mt-8">
-        <h1 className="pb-5 text-xl sm:text-2xl font-bold">Create your account with us below</h1>
-        <p>
-          Already have an account?{" "}
-          <a href="/Login" className="text-[#04A2D1]  hover:border-b-2 hover:border-[#04A2D1]">
-            Login
-          </a>
-        </p>
-        <p className="pt-7 pb-3">You're creating an account as?</p>
+      <div className="">
+       <h1 className="pb-5 text-xl sm:text-2xl font-bold hidden sm:block">
+  Create your account with us below
+</h1>
+<p className="hidden sm:block">
+  Already have an account?{" "}
+  <a href="/Login" className="text-[#04A2D1] font-semibold  ">
+  Login
+</a>
+
+</p>
+<p className="pt-7 pb-3 hidden sm:block">
+  You're creating an account as ?
+</p>
+
         
         <form action="" method="POST">
           <div className="flex gap-2 sm:gap-5 mb-7">
@@ -199,9 +197,12 @@ const Signin = () => {
             Confirm to signing up to circle.io <a href="#" className="hover:border-b-2 hover:border-[#04A2D1] text-[#04A2D1] font-normal">T&C*Apply</a>
           </label>
           
-          <button type="submit" className="py-3 px-20 bg-[#04A2D1] font-normal hover:border-[#04A2D1] text-white rounded-xl mt-5">
-            Create Account
-          </button>
+          <button 
+  type="submit" 
+  className="w-full sm:w-auto py-3 px-20 bg-[#04A2D1] font-normal hover:border-[#04A2D1] text-white rounded-xl mt-5"
+>
+  Create Account
+</button>
         </form>
       </div>
     </div>
