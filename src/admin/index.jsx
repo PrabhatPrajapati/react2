@@ -1,18 +1,45 @@
 import React from "react";
 import SideBar from "./components/sideBar";
 import { X, Pencil } from "lucide-react";
-import bottle from '../assets/bottle.png'
+import bottle from "../assets/bottle.png";
 import { useState } from "react";
 import { Search, LogOut, Bell, Folder, Mic } from "lucide-react";
+import folder from "../assets/folder.png";
+import notifications from "../assets/notifications.png";
+import Vectorr from "../assets/Vectorr.png";
+import Vectorrr from "../assets/Vectorrr.png";
+import Vectorrrr from "../assets/Vectorrrr.png";
+import { useEffect } from "react";
+// import notifications from '../../public/assets/plugins/bootstrap/css/bootstrap.min.css'
 
+{
+  /* <link rel="stylesheet" href="./public/assets/plugins/bootstrap/css/bootstrap.min.css"></link> */
+}
 const index = () => {
   const [search, setSearch] = useState("");
 
+  useEffect(() => {
+    // Create a <link> element
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/plugins/bootstrap/css/bootstrap.min.css"; // ✅ Correct Path
+    link.id = "bootstrap-cdn"; // Assign an ID for easy removal
+
+    // Append to the <head>
+    document.head.appendChild(link);
+
+    return () => {
+      // Cleanup: Remove the link when the component unmounts
+      const existingLink = document.getElementById("bootstrap-cdn");
+      if (existingLink) {
+        existingLink.remove();
+      }
+    };
+  }, []);
+
   return (
     <>
-
       <div class="connect-container align-content-stretch d-flex flex-wrap">
-
         {/* <div class="page-sidebar">
           <div class="logo-box">
             <a href="#" class="logo-text">
@@ -205,34 +232,79 @@ const index = () => {
         <SideBar />
         <div class="page-container">
           <div class="page-header">
-            <nav className="flex items-center justify-between px-8 py-5  border-b w-full h-[84px]" style={{ left: "280px" }}>
+            <nav
+              className="flex items-center justify-between px-8 py-5  border-b w-full h-[84px]"
+              style={{ left: "280px" }}
+            >
               {/* Search Bar */}
-              <div className="flex items-center border rounded-lg px-4 py-2  w-[400px] h-[48px] space-x-3">
-                <Search size={28} className="text-gray-400" />
+              <div className="flex items-center border rounded-lg px-4 py-2  w-[267px] h-[48px] ">
+                <img
+                  src={Vectorrrr}
+                  alt="Logout"
+                  className="w-[17px] h-[17px] cursor-pointer mr-5 text-gray-400"
+                />
                 <input
                   type="text"
                   placeholder="Search"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="outline-none bg-transparent flex-grow text-lg text-gray-600"
+                  className="outline-none font-[700px] bg-transparent x-grow text-[12px] text-gray-600"
                 />
-                <LogOut size={28} className="text-gray-400 cursor-pointer mr-5" />
-                <Mic size={28} className="text-gray-400 cursor-pointer" />
+                <img
+                  src={Vectorr}
+                  alt="Logout"
+                  className="w-[20px] h-[18px] cursor-pointer mr-5 text-gray-400"
+                />
+                <img
+                  src={Vectorrr}
+                  alt="Mic"
+                  className="w-[14px] h-[19px] cursor-pointer text-gray-400"
+                />
               </div>
 
               {/* Navigation Links */}
               <div className="flex space-x-10">
-                <a href="#" className="font-semibold text-black">Dashboard</a>
-                <a href="#" className="text-gray-500 hover:text-black">Credit Request</a>
-                <a href="#" className="text-gray-500 hover:text-black">EPR</a>
-                <a href="#" className="text-gray-500 hover:text-black">Offers</a>
-                <a href="#" className="text-gray-500 hover:text-black">History</a>
+                <a href="#" className="font-semibold text-[12px] text-black">
+                  Dashboard
+                </a>
+                <a
+                  href="#"
+                  className="text-[#7A8699] text-[12px] hover:text-black"
+                >
+                  Credit Request
+                </a>
+                <a
+                  href="#"
+                  className="text-[#7A8699] text-[12px] hover:text-black"
+                >
+                  EPR
+                </a>
+                <a
+                  href="#"
+                  className="text-[#7A8699] text-[12px] hover:text-black"
+                >
+                  Offers
+                </a>
+                <a
+                  href="#"
+                  className="text-[#7A8699] text-[12px] hover:text-black"
+                >
+                  History
+                </a>
               </div>
 
               {/* Icons */}
               <div className="flex space-x-4 text-gray-500">
-                <Folder size={24} className="cursor-pointer" />
-                <Bell size={24} className="cursor-pointer" />
+                <img
+                  src={folder}
+                  alt="Folder"
+                  className="w-6 h-6 cursor-pointer"
+                />
+                <img
+                  src={notifications}
+                  alt="Bell"
+                  className="w-6 h-6 cursor-pointer"
+                />
               </div>
             </nav>
 
@@ -547,82 +619,84 @@ const index = () => {
             </div>
           </div> */}
 
-<div className="mt-6 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  {[1, 2, 3].map((_, index) => (
-    <div
-      key={index}
-      className="w-[356px] h-[344px] rounded-lg border shadow-lg p-4 bg-white relative"
-    >
-      {/* Edit & Close Buttons - Shifted Left */}
-      <div className="absolute top-[-15px] right-[16px] flex space-x-2">
-        <button className="w-[32px] h-[32px] flex items-center justify-center bg-white rounded-full shadow-md border border-gray-200">
-          <Pencil size={12} className="text-gray-600" />
-        </button>
-        <button className="w-[32px] h-[32px] flex items-center justify-center bg-white rounded-full shadow-md border border-gray-200">
-          <X size={12} className="text-red-600" />
-        </button>
-      </div>
+          <div className="mt-6 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[1, 2, 3].map((_, index) => (
+              <div
+                key={index}
+                className="  rounded-lg border shadow-lg p-4 bg-white relative"
+              >
+                {/* Edit & Close Buttons - Shifted Left */}
+                <div className="absolute top-[-15px] right-[16px] flex space-x-2">
+                  <button className="w-[32px] h-[32px] flex items-center justify-center bg-white rounded-full shadow-md border border-gray-200">
+                    <Pencil size={12} className="text-gray-600" />
+                  </button>
+                  <button className="w-[32px] h-[32px] flex items-center justify-center bg-white rounded-full shadow-md border border-gray-200">
+                    <X size={12} className="text-red-600" />
+                  </button>
+                </div>
 
-      {/* Image & Title Section */}
-      <div className="flex items-center space-x-4">
-        <img
-          src={bottle}
-          alt="Plastic Waste"
-          className="w-[80px] h-[80px] rounded-md object-cover"
-        />
-        <div className="flex-1">
-  <p className="text-green-600 font-light text-xs mb-1">2024-2025</p>
-  <h4 className="text-base font-medium leading-tight">
-    Plastic credit - Cat I available
-  </h4>
-  <p className="text-gray-500 text-sm">Plastic Waste</p>
-</div>
+                {/* Image & Title Section */}
+                <div className="flex items-center space-x-4">
+                  <img
+                    src={bottle}
+                    alt="Plastic Waste"
+                    className="w-[80px] h-[80px] rounded-md object-cover"
+                  />
+                  <div className="flex-1">
+                    <p className="text-green-600 font-light text-xs mb-1">
+                      2024-2025
+                    </p>
+                    <h4 className="text-base font-medium leading-tight">
+                      Plastic credit - Cat I available
+                    </h4>
+                    <p className="text-gray-500 text-sm">Plastic Waste</p>
+                  </div>
+                </div>
 
-      </div>
-
-      {/* Details Section */}
-      <div className="mt-3 bg-[#F3F8FC] rounded-[6px] w-[327px] h-[220px] p-1 ml-[-10px]">
-  <div className="grid grid-cols-2  gap-y-3 text-sm p-2">
-    <div className="text-left space-y-1">
-      <p className="font-medium text-xs">EPR Reg. Number</p>
-      <p className="text-gray-700">E1234567</p>
-    </div>
-    <div className="text-right space-y-1">
-      <p className="font-medium text-xs">Recycler Type</p>
-      <p className="text-gray-700">Category I</p>
-    </div>
-    <div className="text-left space-y-1">
-      <p className="font-medium text-xs">Product Type</p>
-      <p className="text-gray-700">Recycler</p>
-    </div>
-    <div className="text-right space-y-1">
-      <p className="font-medium text-xs">Credit Type</p>
-      <p className="text-gray-700">Recycling</p>
-    </div>
-    <div className="text-left space-y-1">
-      <p className="font-medium text-xs">Unit</p>
-      <p className="text-gray-700">Tonne</p>
-    </div>
-    <div className="text-right space-y-1">
-      <p className="font-medium text-xs">Credit Available</p>
-      <p className="text-gray-700">1000</p>
-    </div>
-    <div className="text-left space-y-1">
-      <p className="font-medium text-xs">Minimum Purchase</p>
-      <p className="text-gray-700">150</p>
-    </div>
-    <div className="text-right space-y-1">
-      <p className="font-medium text-xs">Price per credit (Rs.)</p>
-      <p className="text-gray-700">INR 1000</p>
-    </div>
-  </div>
-</div>
-
-    </div>
-  ))}
-</div>
-
-
+                {/* Details Section */}
+                <div className="flex justify-center items-center ">
+                  <div className="mt-3 bg-[#F3F8FC] rounded-[6px] w-[327px] h-[258px] p-1">
+                    <div className="grid grid-cols-2 gap-y-3 text-sm p-2 px-2">
+                      <div className="text-left space-y-1">
+                        <p className="font-medium text-xs">EPR Reg. Number</p>
+                        <p className="text-gray-700">E1234567</p>
+                      </div>
+                      <div className="text-right space-y-1">
+                        <p className="font-medium text-xs">Recycler Type</p>
+                        <p className="text-gray-700">Category I</p>
+                      </div>
+                      <div className="text-left space-y-1">
+                        <p className="font-medium text-xs">Product Type</p>
+                        <p className="text-gray-700">Recycler</p>
+                      </div>
+                      <div className="text-right space-y-1">
+                        <p className="font-medium text-xs">Credit Type</p>
+                        <p className="text-gray-700">Recycling</p>
+                      </div>
+                      <div className="text-left space-y-1">
+                        <p className="font-medium text-xs">Unit</p>
+                        <p className="text-gray-700">Tonne</p>
+                      </div>
+                      <div className="text-right space-y-1">
+                        <p className="font-medium text-xs">Credit Available</p>
+                        <p className="text-gray-700">1000</p>
+                      </div>
+                      <div className="text-left space-y-1">
+                        <p className="font-medium text-xs">Minimum Purchase</p>
+                        <p className="text-gray-700">150</p>
+                      </div>
+                      <div className="text-right space-y-1">
+                        <p className="font-medium text-xs">
+                          Price per credit (Rs.)
+                        </p>
+                        <p className="text-gray-700">INR 1000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

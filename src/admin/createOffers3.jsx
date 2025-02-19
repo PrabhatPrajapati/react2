@@ -1,11 +1,29 @@
 import React from "react";
 import SideBar from "./components/sideBar";
 import { useState } from "react";
-
+import { useEffect } from "react";
 import { Search, LogOut, Bell, Folder, Mic } from "lucide-react";
 
 function createOffer3() {
        const [search, setSearch] = useState("");
+       useEffect(() => {
+                  // Create a <link> element
+                  const link = document.createElement("link");
+                  link.rel = "stylesheet";
+                  link.href = "/assets/plugins/bootstrap/css/bootstrap.min.css"; // ✅ Correct Path
+                  link.id = "bootstrap-cdn"; // Assign an ID for easy removal
+              
+                  // Append to the <head>
+                  document.head.appendChild(link);
+              
+                  return () => {
+                    // Cleanup: Remove the link when the component unmounts
+                    const existingLink = document.getElementById("bootstrap-cdn");
+                    if (existingLink) {
+                      existingLink.remove();
+                    }
+                  };
+                }, []);
   return (
     <div class="connect-container align-content-stretch d-flex flex-wrap">
       <SideBar />

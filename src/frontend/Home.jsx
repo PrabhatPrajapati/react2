@@ -4,6 +4,8 @@ import { IoFilterOutline } from "react-icons/io5";
 import Card1 from "../assets/photo-1712417827761-7a68ff4a90f3.jpg";
 import { useState } from "react";
 import Chec from "../assets/7bb302cbe595dd1ee2a55ed90ef361ca.png";
+import Filter from "../admin/filter";
+
 
 function Home() {
   const [showFilter, setShowFilter] = useState(false);
@@ -227,59 +229,11 @@ function Home() {
 
               {/* Sliding Filter Sidebar */}
               <div
-                className={`fixed top-0 right-0 h-full w-[300px] max-w-full bg-gray-50 shadow-lg p-6 z-50 transition-transform duration-300 ${
+                className={`fixed top-0 right-0 h-full max-w-full bg-gray-50 shadow-lg p-6 z-50 transition-transform duration-300 ${
                   showFilter ? "translate-x-0" : "translate-x-full"
                 }`}
               >
-                <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-lg font-semibold">Popular Filters</h2>
-                  <button
-                    className="text-gray-400 hover:text-gray-600"
-                    onClick={() => setShowFilter(false)}
-                  >
-                    &times;
-                  </button>
-                </div>
-
-                {/* Filter Content (Scrollable) */}
-                <div className="flex-1 overflow-y-auto max-h-[calc(100vh-200px)]">
-                  <div className="space-y-4">
-                    {/* Filter Item */}
-                    {["Price", "Category", "Rating", "Availability"].map(
-                      (filter, index) => (
-                        <div
-                          key={index}
-                          className="bg-white p-4 rounded-md mt-5 mb-5"
-                        >
-                          <h3 className="text-sm font-medium text-gray-700 mb-2">
-                            {filter}
-                          </h3>
-                          <div className="flex space-x-2">
-                            <button className="flex-1 text-sm bg-gray-100 text-gray-600 py-2 rounded-lg border border-gray-200 hover:bg-sky-200 hover:border-sky-500 hover:text-white">
-                              Low To High
-                            </button>
-                            <button className="flex-1 text-sm bg-gray-100 text-gray-600 py-2 rounded-lg border border-gray-200 hover:bg-sky-200 hover:border-sky-500 hover:text-white">
-                              High To Low
-                            </button>
-                          </div>
-                        </div>
-                      )
-                    )}
-                  </div>
-                </div>
-
-                {/* Actions (Fixed at bottom) */}
-                <div className="flex justify-between items-center mt-6">
-                  <button
-                    className="text-gray-500 hover:text-gray-700"
-                    onClick={() => setShowFilter(false)}
-                  >
-                    Cancel
-                  </button>
-                  <button className="bg-blue-500 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-600">
-                    Apply Now
-                  </button>
-                </div>
+                <Filter/>
               </div>
 
               {/* Background Overlay (Optional) */}
@@ -298,7 +252,7 @@ function Home() {
             {/*  */}
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+              <div class="bg-gradient-to-b from-[#04A2D1] to-[#02536B] text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
                 <div>
                   <p class=" text-[14px] font-medium font-poppins">
                     Credit Type | Batteries Waste
@@ -307,7 +261,7 @@ function Home() {
                     Song Giang 2 Hydro Power Project
                   </h2>
                   <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
-                  <div class="mt-2 bg-blue-500 p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                  <div class="mt-2 bg-[#FFFFFF]  p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
                     <p className="mb-1">
                       Available Credit{" "}
                       <span class="float-right">12000 tonne</span>
@@ -348,7 +302,7 @@ function Home() {
                 </div>
               </div>
 
-              <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+              <div class="bg-gradient-to-b from-[#125D2D] to-[#43AC4D] text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
                 <div>
                 <p class=" text-[14px] font-medium font-poppins">
                     Credit Type | Batteries Waste
@@ -370,7 +324,7 @@ function Home() {
                 </div>
               </div>
 
-              <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+              <div class=" bg-gradient-to-b from-[#04A2D1] to-[#02536B] text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
                 <div>
                   <p class=" text-[14px] font-medium font-poppins">
                     Credit Type | Batteries Waste
@@ -379,7 +333,7 @@ function Home() {
                     Song Giang 2 Hydro Power Project
                   </h2>
                   <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
-                  <div class="mt-2 bg-blue-500 p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                  <div class="mt-2 bg-[#FFFFFF] p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
                     <p className="mb-1">
                       Available Credit{" "}
                       <span class="float-right">12000 tonne</span>
@@ -420,7 +374,7 @@ function Home() {
                 </div>
               </div>
 
-              <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+              <div class="bg-gradient-to-b from-[#125D2D] to-[#43AC4D] text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
                 <div>
                 <p class=" text-[14px] font-medium font-poppins">
                     Credit Type | Batteries Waste
@@ -429,7 +383,7 @@ function Home() {
                     Song Giang 2 Hydro Power Project
                   </h2>
                   <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
-                  <div class="mt-2 bg-green-500 bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
+                  <div class="mt-2 bg-[#FFFFFF]  bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
                     <p className="mb-1">
                       Available Credit{" "}
                       <span class="float-right">12000 tonne</span>
@@ -442,7 +396,7 @@ function Home() {
                 </div>
               </div>
 
-              <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+              <div class="bg-gradient-to-b from-[#04A2D1] to-[#02536B] text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
                 <div>
                   <p class=" text-[14px] font-medium font-poppins">
                     Credit Type | Batteries Waste
@@ -451,7 +405,7 @@ function Home() {
                     Song Giang 2 Hydro Power Project
                   </h2>
                   <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
-                  <div class="mt-2 bg-blue-500 p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                  <div class="mt-2 bg-[#FFFFFF]  to-[#02536B] p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
                     <p className="mb-1">
                       Available Credit{" "}
                       <span class="float-right">12000 tonne</span>
@@ -492,7 +446,7 @@ function Home() {
                 </div>
               </div>
 
-              <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+              <div class="bg-gradient-to-b from-[#125D2D] to-[#43AC4D] text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
                 <div>
                 <p class=" text-[14px] font-medium font-poppins">
                     Credit Type | Batteries Waste
@@ -501,7 +455,7 @@ function Home() {
                     Song Giang 2 Hydro Power Project
                   </h2>
                   <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
-                  <div class="mt-2 bg-green-500 bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
+                  <div class="mt-2 bg-[#FFFFFF]  bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
                     <p className="mb-1">
                       Available Credit{" "}
                       <span class="float-right">12000 tonne</span>
@@ -515,7 +469,7 @@ function Home() {
               </div>
 
 
-              <div class="bg-blue-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+              <div class="bg-gradient-to-b from-[#04A2D1] to-[#02536B] text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
                 <div>
                   <p class=" text-[14px] font-medium font-poppins">
                     Credit Type | Batteries Waste
@@ -524,7 +478,7 @@ function Home() {
                     Song Giang 2 Hydro Power Project
                   </h2>
                   <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
-                  <div class="mt-2 bg-blue-500 p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
+                  <div class="mt-2 bg-[#FFFFFF]  p-3 rounded-lg bg-opacity-30 backdrop-blur-md ">
                     <p className="mb-1">
                       Available Credit{" "}
                       <span class="float-right">12000 tonne</span>
@@ -565,7 +519,7 @@ function Home() {
                 </div>
               </div>
 
-              <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
+              <div class="bg-gradient-to-b from-[#125D2D] to-[#43AC4D] text-white p-6 rounded-xl shadow-lg w-full h-[380px] flex flex-col justify-end">
                 <div>
                 <p class=" text-[14px] font-medium font-poppins">
                     Credit Type | Batteries Waste
@@ -574,7 +528,7 @@ function Home() {
                     Song Giang 2 Hydro Power Project
                   </h2>
                   <p class="text-[18px] font-light mt-2">INR 120000/Tonne</p>
-                  <div class="mt-2 bg-green-500 bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
+                  <div class="mt-2 bg-[#FFFFFF]  bg-opacity-30 backdrop-blur-md p-3 rounded-lg">
                     <p className="mb-1">
                       Available Credit{" "}
                       <span class="float-right">12000 tonne</span>

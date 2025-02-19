@@ -23,6 +23,10 @@ import EprAccount3 from './admin/eprAccount3.jsx';
 import EprAccount4 from './admin/eprAccount4.jsx';
 import EprAccount5 from './admin/eprAccount5.jsx';
 import EprAccount6 from './admin/eprAccount6.jsx';
+import Dashboard3 from './superAdmin/dashboard3.jsx';
+import CreateOffer4 from './admin/createOffer4.jsx';
+import CreateOffer5 from './admin/createOffer5.jsx';
+import Filter from './admin/filter.jsx';
 
 
 const router = createBrowserRouter([
@@ -98,6 +102,22 @@ const router = createBrowserRouter([
       {
         path : "/eprAccount6",
         element : <EprAccount6/>
+      },
+      {
+        path : "/dashboard3",
+        element : <Dashboard3/>
+      },
+      {
+        path : "/createOffer4",
+        element : <CreateOffer4 />
+      },
+      {
+        path : "/createOffer5",
+        element : <CreateOffer5 />
+      },
+      {
+        path : "/filter",
+        element : <Filter />
       },
 
     ]
