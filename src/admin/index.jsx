@@ -4,11 +4,7 @@ import { X, Pencil } from "lucide-react";
 import bottle from "../assets/bottle.png";
 import { useState } from "react";
 import { Search, LogOut, Bell, Folder, Mic } from "lucide-react";
-import folder from "../assets/folder.png";
-import notifications from "../assets/notifications.png";
-import Vectorr from "../assets/Vectorr.png";
-import Vectorrr from "../assets/Vectorrr.png";
-import Vectorrrr from "../assets/Vectorrrr.png";
+import Navbar from "./components/Navbar";
 import { useEffect } from "react";
 // import notifications from '../../public/assets/plugins/bootstrap/css/bootstrap.min.css'
 
@@ -232,81 +228,7 @@ const index = () => {
         <SideBar />
         <div class="page-container">
           <div class="page-header">
-            <nav
-              className="flex items-center justify-between px-8 py-5  border-b w-full h-[84px]"
-              style={{ left: "280px" }}
-            >
-              {/* Search Bar */}
-              <div className="flex items-center border rounded-lg px-4 py-2  w-[267px] h-[48px] ">
-                <img
-                  src={Vectorrrr}
-                  alt="Logout"
-                  className="w-[17px] h-[17px] cursor-pointer mr-5 text-gray-400"
-                />
-                <input
-                  type="text"
-                  placeholder="Search"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="outline-none font-[700px] bg-transparent x-grow text-[12px] text-gray-600"
-                />
-                <img
-                  src={Vectorr}
-                  alt="Logout"
-                  className="w-[20px] h-[18px] cursor-pointer mr-5 text-gray-400"
-                />
-                <img
-                  src={Vectorrr}
-                  alt="Mic"
-                  className="w-[14px] h-[19px] cursor-pointer text-gray-400"
-                />
-              </div>
-
-              {/* Navigation Links */}
-              <div className="flex space-x-10">
-                <a href="#" className="font-semibold text-[12px] text-black">
-                  Dashboard
-                </a>
-                <a
-                  href="#"
-                  className="text-[#7A8699] text-[12px] hover:text-black"
-                >
-                  Credit Request
-                </a>
-                <a
-                  href="#"
-                  className="text-[#7A8699] text-[12px] hover:text-black"
-                >
-                  EPR
-                </a>
-                <a
-                  href="#"
-                  className="text-[#7A8699] text-[12px] hover:text-black"
-                >
-                  Offers
-                </a>
-                <a
-                  href="#"
-                  className="text-[#7A8699] text-[12px] hover:text-black"
-                >
-                  History
-                </a>
-              </div>
-
-              {/* Icons */}
-              <div className="flex space-x-4 text-gray-500">
-                <img
-                  src={folder}
-                  alt="Folder"
-                  className="w-6 h-6 cursor-pointer"
-                />
-                <img
-                  src={notifications}
-                  alt="Bell"
-                  className="w-6 h-6 cursor-pointer"
-                />
-              </div>
-            </nav>
+          <Navbar/>
 
             {/* <nav class="navbar navbar-expand">
               <button
@@ -623,7 +545,7 @@ const index = () => {
             {[1, 2, 3].map((_, index) => (
               <div
                 key={index}
-                className="  rounded-lg border shadow-lg p-4 bg-white relative"
+                className="  rounded-lg border shadow-[0px_4px_12px_0px_#0000001C] p-4 bg-white relative"
               >
                 {/* Edit & Close Buttons - Shifted Left */}
                 <div className="absolute top-[-15px] right-[16px] flex space-x-2">

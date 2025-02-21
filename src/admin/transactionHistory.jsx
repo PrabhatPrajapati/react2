@@ -4,7 +4,8 @@ import { useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import { useEffect } from "react";
 import { Search, LogOut, Bell, Folder, Mic } from "lucide-react";
-
+import Navbar from "./components/Navbar";
+import Vector5 from "/src/assets/Vector5.png";
 function transactionHistory() {
   const [search, setSearch] = useState("");
   useEffect(() => {
@@ -31,56 +32,14 @@ function transactionHistory() {
       <SideBar />
       <div class="page-container">
         <div class="page-header">
-          <nav
-            className="flex items-center justify-between px-8 py-5  border-b w-full h-[84px]"
-            style={{ left: "280px" }}
-          >
-            {/* Search Bar */}
-            <div className="flex items-center border rounded-lg px-4 py-2  w-[400px] h-[48px] space-x-3">
-              <Search size={28} className="text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="outline-none bg-transparent flex-grow text-lg text-gray-600"
-              />
-              <LogOut size={28} className="text-gray-400 cursor-pointer mr-5" />
-              <Mic size={28} className="text-gray-400 cursor-pointer" />
-            </div>
-
-            {/* Navigation Links */}
-            <div className="flex space-x-10">
-              <a href="#" className="font-semibold text-black">
-                Dashboard
-              </a>
-              <a href="#" className="text-gray-500 hover:text-black">
-                Credit Request
-              </a>
-              <a href="#" className="text-gray-500 hover:text-black">
-                EPR
-              </a>
-              <a href="#" className="text-gray-500 hover:text-black">
-                Offers
-              </a>
-              <a href="#" className="text-gray-500 hover:text-black">
-                History
-              </a>
-            </div>
-
-            {/* Icons */}
-            <div className="flex space-x-4 text-gray-500">
-              <Folder size={24} className="cursor-pointer" />
-              <Bell size={24} className="cursor-pointer" />
-            </div>
-          </nav>
+        <Navbar/>
         </div>
         <div class="page-content">
           <div class="page-info"></div>
         </div>
 
         {/* ----------------- */}
-        <div className="p-6 font-poppins w-full mx-auto relative space-y-6">
+        <div className="p-10 font-poppins w-full mx-auto relative space-y-6">
           {/* First Transaction Card */}
           <div className="mb-4">
             <h1 className="text-xl font-semibold text-gray-900">
@@ -94,11 +53,18 @@ function transactionHistory() {
           {[1, 2].map((_, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-[5px] p-6 border border-gray-200 w-[1095px] h-[286px] relative"
+              className="bg-white  rounded-[5px] p-6 border border-gray-200 w-[1095px] h-[286px] relative"
             >
               {/* Download Certificate Button - Positioned at Top Right */}
-              <button className="absolute top-4 right-14 w-[200px] h-[38px] flex items-center font-light justify-center gap-2 border border-gray-300 px-2 py-2 rounded-md shadow-sm text-sm text-gray-700 hover:bg-gray-100 whitespace-nowrap">
-                <FaDownload className="w-3 h-3" /> Download Certificate
+              <button className="absolute top-4 right-16 w-[200px] h-[38px] flex items-center font-[500] justify-center gap-2 border border-gray-300 px-2 py-2 rounded-[8px] text-[12px] text-[#230E0E] hover:bg-gray-100 whitespace-nowrap">
+              
+      <img 
+        src={Vector5} 
+        alt="Download Certificate" 
+        className="w-[13px] h-[12px]"
+      />
+      Download Certificate
+    
               </button>
 
               {/* Title and Subtitle */}
@@ -110,49 +76,47 @@ function transactionHistory() {
               </h2>
 
               {/* Information Grid */}
-              <div className="grid grid-cols-4 gap-y-6 gap-x-24 text-sm text-gray-900">
-                <div>
-                  <p className="font-semibold text-xs">Recycler ID</p>
-                  <p className="text-xs font-light">E1234567</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-xs">Work Order No.</p>
-                  <p className="text-xs font-light">S23423EE</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-xs">Work Order Date</p>
-                  <p className="text-xs font-light">24-05-2024 | 05:30 PM</p>
-                </div>
-                <div>
-                  <p className="font-medium text-xs">Producer Type</p>
-                  <p className="text-xs font-light">Recycling</p>
-                </div>
-                <div>
-                  <p className="font-medium text-xs">Product Type</p>
-                  <p className="text-xs font-light">Tonne</p>
-                </div>
-                <div>
-                  <p className="font-medium text-xs">Credit Type</p>
-                  <p className="text-xs font-light">1000</p>
-                </div>
-                <div>
-                  <p className="font-medium text-xs">Credit Quantity</p>
-                  <p className="text-xs font-light">150</p>
-                </div>
-                <div>
-                  <p className="font-medium text-xs">Price per credit (Rs.)</p>
-                  <p className="text-xs font-light">INR 1000</p>
-                </div>
-                <div>
-                  <p className="font-medium text-sm">
-                    Total Price (incl. GST) (Rs)
-                  </p>
-                  <p className="text-xs font-light">Tonne</p>
-                </div>
-                <div>
-                  <p className="font-medium text-xs">Offered By</p>
-                  <p className="text-xs font-light">1000</p>
-                </div>
+              <div className="grid grid-cols-4  gap-x-24 text-sm text-gray-900">
+              <div>
+    <p className="font-semibold text-xs mb-1">Recycler ID</p>
+    <p className="text-xs font-light">E1234567</p>
+  </div>
+  <div>
+    <p className="font-semibold text-xs mb-1">Work Order No.</p>
+    <p className="text-xs font-light">S23423EE</p>
+  </div>
+  <div>
+    <p className="font-semibold text-xs mb-1">Work Order Date</p>
+    <p className="text-xs font-light">24-05-2024 | 05:30 PM</p>
+  </div>
+  <div>
+    <p className="font-medium text-xs mb-1">Producer Type</p>
+    <p className="text-xs font-light">Recycling</p>
+  </div>
+  <div>
+    <p className="font-medium text-xs mb-1">Product Type</p>
+    <p className="text-xs font-light">Tonne</p>
+  </div>
+  <div>
+    <p className="font-medium text-xs mb-1">Credit Type</p>
+    <p className="text-xs font-light">1000</p>
+  </div>
+  <div>
+    <p className="font-medium text-xs mb-1">Credit Quantity</p>
+    <p className="text-xs font-light">150</p>
+  </div>
+  <div>
+    <p className="font-medium text-xs mb-1">Price per credit (Rs.)</p>
+    <p className="text-xs font-light">INR 1000</p>
+  </div>
+  <div>
+    <p className="font-medium text-sm mb-1">Total Price (incl. GST) (Rs)</p>
+    <p className="text-xs font-light">Tonne</p>
+  </div>
+  <div>
+    <p className="font-medium text-xs mb-1">Offered By</p>
+    <p className="text-xs font-light">1000</p>
+  </div>
               </div>
 
               {/* Download EPR Documents Button - Positioned Below the Grid on the Right */}
@@ -161,7 +125,12 @@ function transactionHistory() {
                   className="flex items-center gap-2 text-sm font-medium"
                   style={{ color: "#3D9836" }}
                 >
-                  <FaDownload /> Download EPR related Documents
+                  <img 
+        src={Vector5} 
+        alt="Download Certificate" 
+        className="w-[13px] h-[12px]"
+      />
+      Download EPR related Documents
                 </button>
               </div>
             </div>

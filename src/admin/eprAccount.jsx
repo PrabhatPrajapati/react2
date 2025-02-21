@@ -5,6 +5,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 import { FaPlus } from "react-icons/fa";
+import folder from "../assets/folder.png";
+import notifications from "../assets/notifications.png";
+import Vectorr from "../assets/Vectorr.png";
+import Vectorrr from "../assets/Vectorrr.png";
+import Vectorrrr from "../assets/Vectorrrr.png";
+import Navbar from "./components/Navbar";
+
 
 import { Search, LogOut, Bell, Folder, Mic } from "lucide-react";
 
@@ -33,59 +40,17 @@ const eprAccount = () => {
       <SideBar />
       <div class="page-container">
         <div class="page-header">
-          <nav
-            className="flex items-center justify-between px-8 py-5  border-b w-full h-[84px]"
-            style={{ left: "280px" }}
-          >
-            {/* Search Bar */}
-            <div className="flex items-center border rounded-lg px-4 py-2  w-[400px] h-[48px] space-x-3">
-              <Search size={28} className="text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="outline-none bg-transparent flex-grow text-lg text-gray-600"
-              />
-              <LogOut size={28} className="text-gray-400 cursor-pointer mr-5" />
-              <Mic size={28} className="text-gray-400 cursor-pointer" />
-            </div>
-
-            {/* Navigation Links */}
-            <div className="flex space-x-10">
-              <a href="#" className="font-semibold text-black">
-                Dashboard
-              </a>
-              <a href="#" className="text-gray-500 hover:text-black">
-                Credit Request
-              </a>
-              <a href="#" className="text-gray-500 hover:text-black">
-                EPR
-              </a>
-              <a href="#" className="text-gray-500 hover:text-black">
-                Offers
-              </a>
-              <a href="#" className="text-gray-500 hover:text-black">
-                History
-              </a>
-            </div>
-
-            {/* Icons */}
-            <div className="flex space-x-4 text-gray-500">
-              <Folder size={24} className="cursor-pointer" />
-              <Bell size={24} className="cursor-pointer" />
-            </div>
-          </nav>
+        <Navbar/> 
         </div>
         <div class="page-content">
           <div class="page-info"></div>
         </div>
 
         {/* ----------------- */}
-        <div className="p-6 font-poppins w-full mx-auto ">
+        <div className="p-10 md:p-12 font-poppins w-full mx-auto ">
           {/* Header */}
           <div className="bg-white shadow-md rounded-md p-6 border border-gray-200">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex flex-wrap justify-between items-center mb-4">
               <div className="flex flex-col gap-1">
                 {/* Title and Label on the Same Line */}
                 <div className="flex items-center gap-3">
@@ -127,7 +92,7 @@ const eprAccount = () => {
                     ].map((heading, index) => (
                       <th
                         key={index}
-                        className="px-4 py-2 font-medium text-gray-700"
+                        className="p-1 font-medium text-gray-700 pl-0 md:pl-3 "
                       >
                         {heading} <span className="text-gray-400">↓</span>
                       </th>

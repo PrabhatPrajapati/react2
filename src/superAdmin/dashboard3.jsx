@@ -2,6 +2,9 @@ import React from 'react'
 import SideBar from '../admin/components/sideBar'
 import { useState } from "react";
 import card2 from '../assets/image 11.png'
+import Navbar from '../admin/components/Navbar';
+import { useEffect } from 'react';
+import Vector7 from "/src/assets/Vector7.svg";
 
 import { FaPlus } from "react-icons/fa";
 
@@ -9,6 +12,24 @@ import { Search, LogOut, Bell, Folder, Mic } from "lucide-react";
 
 const dashboard3 = () => {
   const [search, setSearch] = useState("");
+   useEffect(() => {
+                // Create a <link> element
+                const link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = "/assets/plugins/bootstrap/css/bootstrap.min.css"; // ✅ Correct Path
+                link.id = "bootstrap-cdn"; // Assign an ID for easy removal
+            
+                // Append to the <head>
+                document.head.appendChild(link);
+            
+                return () => {
+                  // Cleanup: Remove the link when the component unmounts
+                  const existingLink = document.getElementById("bootstrap-cdn");
+                  if (existingLink) {
+                    existingLink.remove();
+                  }
+                };
+              }, []);
   return (
     <div class="connect-container align-content-stretch d-flex flex-wrap">
 
@@ -16,36 +37,7 @@ const dashboard3 = () => {
     <SideBar />
     <div class="page-container">
       <div class="page-header">
-        <nav className="flex items-center justify-between px-8 py-5  border-b w-full h-[84px]" style={{ left: "280px" }}>
-          {/* Search Bar */}
-          <div className="flex items-center border rounded-lg px-4 py-2  w-[400px] h-[48px] space-x-3">
-            <Search size={28} className="text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="outline-none bg-transparent flex-grow text-lg text-gray-600"
-            />
-            <LogOut size={28} className="text-gray-400 cursor-pointer mr-5" />
-            <Mic size={28} className="text-gray-400 cursor-pointer" />
-          </div>
-
-          {/* Navigation Links */}
-          <div className="flex space-x-10">
-            <a href="#" className="font-semibold text-black">Dashboard</a>
-            <a href="#" className="text-gray-500 hover:text-black">Credit Request</a>
-            <a href="#" className="text-gray-500 hover:text-black">EPR</a>
-            <a href="#" className="text-gray-500 hover:text-black">Offers</a>
-            <a href="#" className="text-gray-500 hover:text-black">History</a>
-          </div>
-
-          {/* Icons */}
-          <div className="flex space-x-4 text-gray-500">
-            <Folder size={24} className="cursor-pointer" />
-            <Bell size={24} className="cursor-pointer" />
-          </div>
-        </nav>
+       <Navbar/>
 
 
       </div>
@@ -62,31 +54,32 @@ const dashboard3 = () => {
    
 
       {/* ----------------- */}
-      <div className="p-6 font-poppins w-full mx-auto">
+      <div className="p-10 font-poppins w-full mx-auto">
   {/* Header Section */}
-  <div className="bg-white rounded-md border border-gray-300 h-[90px] p-6 ">
-    <div className="flex justify-between items-center mb-4">
-      <div className="flex flex-col gap-1">
-        {/* Title and Label on the Same Line */}
-        <div className="flex items-center gap-3">
-          <h1 className="text-lg font-medium text-gray-900">Producer - Dashboard</h1>
-          <span className="bg-[#F7FAFF] text-[#0070FF] text-xs font-medium px-3 py-1 rounded-full">
-            Label text or value
-          </span>
-        </div>
-        {/* Description on a New Line */}
-        <p className="text-gray-500 text-sm">A descriptive body text comes here</p>
+  <div className="bg-white rounded-md border border-gray-300 md:h-[90px] p-6">
+  <div className="flex justify-between items-center mb-4 flex-col sm:flex-row">
+    <div className="flex flex-wrap flex-col gap-[2px]">
+      {/* Title and Label on the Same Line */}
+      <div className="flex items-center gap-3 mt-[-30px]">
+        <h1 className="text-lg font-medium text-gray-900">Producer - Dashboard</h1>
+        <span className="bg-[#F7FAFF] text-[#0070FF] text-xs font-medium px-3 py-1 rounded-full">
+          Label text or value
+        </span>
       </div>
-
-      {/* Dropdown */}
-      <button className="flex items-center justify-between w-[153px] h-[40px] px-3 py-2 text-[14px] font-[400px] bg-white text-black rounded-md shadow-md border border-gray-300 hover:bg-gray-100">
-        FY 2024 - 2025 <span>▼</span>
-      </button>
+      {/* Description on a New Line */}
+      <p className="text-gray-500 text-sm">A descriptive body text comes here</p>
     </div>
+
+    {/* Dropdown */}
+    <button className="flex items-center mb-11 justify-between w-full sm:w-[153px] h-[40px] px-3 py-2 text-[14px] font-[400] bg-white text-black rounded-md shadow-md border border-gray-300 hover:bg-gray-100">
+      FY 2024 - 2025 <img src={Vector7} alt="Dropdown Arrow" className="w-[7px] h-[4px]" />
+    </button>
   </div>
+</div>
+
 
   {/* Table Section */}
-  <div className="bg-white shadow-md rounded-md border border-gray-300 ">
+  <div className="bg-white shadow-md rounded-md  border-gray-300 ">
     <div className="overflow-x-auto">
       <table className="w-full text-sm text-left border-collapse">
         <thead>

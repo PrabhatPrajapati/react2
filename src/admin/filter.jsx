@@ -89,6 +89,10 @@ function filter() {
     setSelectedFilters([]);
     setShowCategories(false); // Hide categories when clearing filters
   };
+  const handleCancel = () => {
+    handleClearAll(); // Clear filters
+    setActiveFilter("Producer Type"); // Reset filter category
+  };
 
   return (
     <div className="w-[450px]  mx-auto ">
@@ -170,7 +174,7 @@ function filter() {
 
     {/* Footer buttons */}
     <div className="flex justify-between  pt-4 mt-4">
-      <button className=" text-[16px] font-[400px] font-poppins px-4 py-2 rounded text-gray-700">Cancel</button>
+      <button onClick={handleCancel} className=" text-[16px] font-[400px] font-poppins px-4 py-2 rounded text-gray-700">Cancel</button>
       <button className="font-[600] text-[16px]  w-[151px] h-[48px]  font-poppins bg-[#04A2D1] text-white px-4 py-2 rounded">Apply Now</button>
     </div>
   </div>

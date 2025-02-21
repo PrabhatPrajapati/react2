@@ -27,6 +27,7 @@ import Dashboard3 from './superAdmin/dashboard3.jsx';
 import CreateOffer4 from './admin/createOffer4.jsx';
 import CreateOffer5 from './admin/createOffer5.jsx';
 import Filter from './admin/filter.jsx';
+import Navbar from './admin/components/Navbar.jsx';
 
 
 const router = createBrowserRouter([
@@ -119,7 +120,11 @@ const router = createBrowserRouter([
         path : "/filter",
         element : <Filter />
       },
-
+      {
+        path : "/navbar ",
+        element : <Navbar/>
+      },
+     
     ]
   },
 ])
