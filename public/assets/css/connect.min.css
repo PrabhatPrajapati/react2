@@ -758,14 +758,14 @@ h6 {
 
 .accordion-menu>li.active-page>a,
 .accordion-menu>li>a:hover {
-    color: #5fd0a5;
-    background: rgba(0, 0, 0, .01)
+    color:#3D9836;
+    /* background: rgba(0, 0, 0, .01) */
 }
 
-.accordion-menu li.active-page>a:only-child {
+/* .accordion-menu li.active-page>a:only-child {
     background: linear-gradient(90deg, #55c3b7 0, #5fd0a5 48%, #66da90 100%);
     color: #fff
-}
+} */
 
 .accordion-menu li.open a i.has-sub-menu {
     transform: rotate(135deg)

@@ -171,7 +171,7 @@ const createOffer4 = () => {
         <div className="   px-4 md:px-8  w-full mb-36 mt-[-22px] ">
           <div className="flex flex-wrap  gap-6 justify-center items-center md:items-start md:justify-start">
             {/* Card 1 */}
-            <div className="bg-gradient-to-b from-[#04A2D1] to-[#02536B] text-white p-6 rounded-xl shadow-lg w-full w-[400px] h-[380px] flex flex-col justify-end">
+            <div className="bg-gradient-to-b from-[#04A2D1] to-[#02536B] text-white p-6 rounded-xl shadow-lg  w-[400px] h-[380px] flex flex-col justify-end">
               <p className="text-[14px] font-medium font-poppins">
                 Credit Type | Batteries Waste
               </p>
